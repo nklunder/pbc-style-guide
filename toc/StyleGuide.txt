@@ -1,9 +1,16 @@
-Style Guide
+Premera Style Guide
+-----------------------------------------
+
 
 General Layout
 	Breakpoints
 	Columns
 	Stacking Elements
+
+Colors
+	Default Palette
+	Secondary Palette
+	Scales
 
 Typography
 	Typefaces
@@ -11,11 +18,6 @@ Typography
 	Copy
 	Blockquotes
 	Lists
-
-Colors
-	Default Palette
-	Secondary Palette
-	Scale Definitions
 
 Imagery
 	Theme & Tone
