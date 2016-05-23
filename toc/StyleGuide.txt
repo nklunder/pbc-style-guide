@@ -1,0 +1,60 @@
+Style Guide
+
+General Layout
+	Breakpoints
+	Columns
+	Stacking Elements
+
+Typography
+	Typefaces
+	Headers
+	Copy
+	Blockquotes
+	Lists
+
+Colors
+	Default Palette
+	Secondary Palette
+	Scale Definitions
+
+Imagery
+	Theme & Tone
+	Cropping for breakpoints
+
+Iconography
+	Icon Library
+	Usage
+	Spacing
+
+Messaging
+	Styles
+	Usage
+
+Links
+	Styles
+	Usage
+
+Content Boxes
+	Types
+	Usage
+
+Buttons
+	Styles
+	Usage
+
+Navigation
+	Types
+	Usage
+
+Accordian Menus
+	Types
+	Usage
+
+Sidebars
+	Types
+	Usage
+
+Footer
+	Style
+	Usage
+
