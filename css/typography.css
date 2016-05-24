@@ -1,0 +1,19 @@
+html, body {
+	color: #111;
+}
+
+h1 {
+  color: #009bda;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #707070;
+}
+
+a {
+	color: #0066CC;
+}
+a:hover,
+a:active {
+	color: #00478e;
+}
