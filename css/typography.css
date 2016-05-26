@@ -1,14 +1,18 @@
+/* ==========================================================================
+   Color - WCAG AA compliant
+   ========================================================================== */
+
 html, body {
-	color: #111;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.8);
+	font-family: 'Roboto';
 }
 
-h1 {
-  color: #009bda;
+h1, h2, h3, h4 {
+  color: rgba(0, 0, 0, 0.7);;
 }
 
-h2, h3, h4, h5, h6 {
-  color: #707070;
-}
+p { line-height: 1.61;}
 
 a {
 	color: #0066CC;
@@ -16,4 +20,52 @@ a {
 a:hover,
 a:active {
 	color: #00478e;
+}
+
+/* ==========================================================================
+   Sizing and spacing
+   ========================================================================== */
+
+h1 {
+	font-size: 2.25rem;
+}
+
+h2 {
+	font-size: 1.875rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.125rem;
+}
+
+/* ==========================================================================
+   Component specific
+   ========================================================================== */
+
+.jumbotron-heading {
+	font-size: 2.625rem;
+}
+
+.title {
+	font-size: 1.125rem;
+	font-weight: 500;
+}
+
+/* ==========================================================================
+   Google Fonts testing styles
+   ========================================================================== */
+.roboto 	   { font-family: 'Roboto'; }
+.open-sans   { font-family: 'Open Sans'; }
+.source-sans { font-family: 'Source Sans Pro'; }
+.lato				 { font-family: 'Lato'; }
+.raleway		 { font-family: 'Raleway'; }
+
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts-new/roboto.woff'); /* IE9 Compat Modes */
 }
