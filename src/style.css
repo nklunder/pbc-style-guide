@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Temporary Junk
+   ========================================================================== */
+
+/* will be replaced with Google CDN link */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts-new/roboto.woff');
+}
+
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+ /**
+  * Rucksac PostCSS plugin used for responsive typography
+  * (http://simplaio.github.io/rucksack/docs/#responsive-type)
+  *
+  * font-range property based on Bootstrap's range of breakpoints;
+  */
+html, body {
+  font-size: responsive 14px 18px;
+  font-range: 480px 1200px;
+
+  font-family: 'Roboto';
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.5;
+}
+
+a { color: #0066CC; }
+a:hover,
+a:active { color: #00478e; }
+
+h1 { font-size: responsive 42px 54px; }
+h2 { font-size: responsive 34px 44px; }
+h3 { font-size: responsive 27px 35px; }
+h4 { font-size: responsive 22px 28px; }
+h5 { font-size: responsive 18px 23px; }
+h6 { font-size: responsive 14px 18px; }
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.container-fluid {
+  padding: 1em;
+}
+
+@media only screen and (min-width : 1200px) {
+  .container-fluid {
+    padding: 1em calc(50% - 568px);
+  }
+}
+
+
+/* ==========================================================================
+   Global media query rules
+   ========================================================================== */
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
