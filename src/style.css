@@ -32,12 +32,12 @@ a { color: #0066CC; }
 a:hover,
 a:active { color: #00478e; }
 
-h1 { font-size: responsive 42px 54px; }
-h2 { font-size: responsive 34px 44px; }
-h3 { font-size: responsive 27px 35px; }
-h4 { font-size: responsive 22px 28px; }
+h1 { font-size: responsive 28px 36px; }
+h2 { font-size: responsive 25px 32px; }
+h3 { font-size: responsive 22px 29px; }
+h4 { font-size: responsive 20px 26px; }
 h5 { font-size: responsive 18px 23px; }
-h6 { font-size: responsive 14px 18px; }
+h6 { font-size: responsive 16px 20px; }
 
 
 /* ==========================================================================
