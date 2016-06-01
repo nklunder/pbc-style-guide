@@ -1,12 +1,51 @@
 /* ==========================================================================
-   Temporary Junk
+   Color
    ========================================================================== */
 
-/* will be replaced with Google CDN link */
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts-new/roboto.woff');
+:root {
+  /* base colors - palette dynamically generated based on these values */
+  --premera-blue: #0082ca;
+  --yellow: #799900;
+  --lime: #799900;
+
+
+  --primary-100: color(var(--premera-blue) tint(60%));
+  --primary-300: color(var(--premera-blue) tint(20%));
+  --primary-500: var(--premera-blue);
+  --primary-700: color(var(--premera-blue) shade(25%));
+  --primary-900: color(var(--premera-blue) shade(60%));
+
+  --accent-200: color(var(--yellow) tint(40%));
+  --accent-500: var(--yellow);
+  --accent-900: color(var(--yellow) shade(60%));
+
+  --gray-100: rgba(0, 0, 0, 0.04);
+  --gray-300: rgba(0, 0, 0, 0.12);
+  --gray-500: rgba(0, 0, 0, 0.38);
+  --gray-600: rgba(0, 0, 0, 0.54);
+  --gray-900: rgba(0, 0, 0, 0.87);
 }
+
+
+/* temporary! for testing out color palette values */
+[class^="base-"],
+[class^="accent-"],
+[class^="gray-"] {
+  height: 80px;
+}
+.base-0 { background-color: var(--primary-100); }
+.base-1 { background-color: var(--primary-300); }
+.base-2 { background-color: var(--primary-500); }
+.base-3 { background-color: var(--primary-700); }
+.base-4 { background-color: var(--primary-900); }
+.accent-0 { background-color: var(--accent-200); }
+.accent-1 { background-color: var(--accent-500); }
+.accent-2 { background-color: var(--accent-900); }
+.gray-0 { background-color: var(--gray-100); }
+.gray-1 { background-color: var(--gray-300); }
+.gray-2 { background-color: var(--gray-500); }
+.gray-3 { background-color: var(--gray-600); }
+.gray-4 { background-color: var(--gray-900); }
 
 
 /* ==========================================================================
@@ -14,12 +53,12 @@
    ========================================================================== */
 
  /**
-  * Rucksac PostCSS plugin used for responsive typography
-  * (http://simplaio.github.io/rucksack/docs/#responsive-type)
+  * Responsive Typography
   *
-  * font-range property based on Bootstrap's range of breakpoints
-  *
-  * Type is set using a modular scale of 1.125
+  * - Rucksack PostCSS plugin used for generating values
+  *   (http://simplaio.github.io/rucksack/docs/#responsive-type)
+  * - font-range property based on Bootstrap's range of breakpoints
+  * - Type is set using a modular scale of 1.125
   */
 html, body {
   /* Override Bootstrap's 14px base font size*/
@@ -53,6 +92,12 @@ h6 { font-size: responsive 0.984rem 1.266rem; }
    Layout
    ========================================================================== */
 
+/**
+ * Fixed Width Content
+ *
+ * Used with Bootstrap's '.container-fluid'. Constrains content to the width of
+ * the largest breakpoint while allowing full-width background colors & images.
+ */
 .container-fixed-content {
   padding: 1em;
 }
@@ -86,4 +131,16 @@ h6 { font-size: responsive 0.984rem 1.266rem; }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
+}
+
+
+
+/* ==========================================================================
+   Temporary Junk
+   ========================================================================== */
+
+/* will be replaced with Google CDN link */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts-new/roboto.woff');
 }
