@@ -2,7 +2,19 @@ var gulp = require('gulp'),
     postCSS = require('gulp-postcss'),
     cssNext = require('postcss-cssnext'),
     rucksack = require('rucksack-css'),
-    server = require('gulp-webserver');
+    browserSync = require('browser-sync').create();
+
+
+gulp.task('serve', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+
+    gulp.watch("./src/**/*.css", ['style']);
+    gulp.watch("./*.html").on('change', browserSync.reload);
+});
 
 gulp.task('style', function () {
   var processors = [
@@ -12,14 +24,8 @@ gulp.task('style', function () {
 
   return gulp.src('./src/style.css')
     .pipe(postCSS(processors))
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./build'))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('webserver', function () {
-  gulp.src('./')
-  .pipe(server({
-    livereload: true,
-    directoryListing: true,
-    open: true
-  }));
-});
+gulp.task('default', ['style', 'serve']);

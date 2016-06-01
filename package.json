@@ -1,0 +1,26 @@
+{
+  "name": "pbc-style-guide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "2.12.10",
+    "gulp": "3.9.1",
+    "gulp-postcss": "6.1.1",
+    "postcss-cssnext": "2.5.2",
+    "rucksack-css": "0.8.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nklunder/pbc-style-guide.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nklunder/pbc-style-guide/issues"
+  },
+  "homepage": "https://github.com/nklunder/pbc-style-guide#readme"
+}
