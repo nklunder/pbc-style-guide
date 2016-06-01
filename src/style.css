@@ -44,12 +44,12 @@ h6 { font-size: responsive 16px 20px; }
    Layout
    ========================================================================== */
 
-.container-fluid {
+.container-fixed-content {
   padding: 1em;
 }
 
 @media only screen and (min-width : 1200px) {
-  .container-fluid {
+  .container-fixed-content {
     padding: 1em calc(50% - 568px);
   }
 }
