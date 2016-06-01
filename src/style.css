@@ -79,12 +79,36 @@ a { color: #0066CC; }
 a:hover,
 a:active { color: #00478e; }
 
-h1 { font-size: responsive 1.774rem 2.281rem; }
-h2 { font-size: responsive 1.577rem 2.027rem; }
-h3 { font-size: responsive 1.402rem 1.802rem; }
-h4 { font-size: responsive 1.246rem 1.602rem; }
-h5 { font-size: responsive 1.107rem 1.424rem; }
-h6 { font-size: responsive 0.984rem 1.266rem; }
+h1 {
+  font-size: responsive;
+  min-font-size: 1.774rem;
+  max-font-size: 2.281rem;
+}
+h2 {
+  font-size: responsive;
+  min-font-size: 1.577rem;
+  max-font-size: 2.027rem;
+}
+h3 {
+  font-size: responsive;
+  min-font-size: 1.402rem;
+  max-font-size: 1.802rem;
+}
+h4 {
+  font-size: responsive;
+  min-font-size: 1.246rem;
+  max-font-size: 1.602rem;
+}
+h5 {
+  font-size: responsive;
+  min-font-size: 1.107rem;
+  max-font-size: 1.424rem;
+}
+h6 {
+  font-size: responsive;
+  min-font-size: 0.984rem;
+  max-font-size: 1.266rem;
+}
 
 
 /* ==========================================================================
