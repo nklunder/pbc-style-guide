@@ -29,7 +29,7 @@
    *
    * - Taken from Google Material Design guidelines
    *   (http://www.google.com/design/spec/style/color.html#color-text-background-colors)
-   * - Rucksack PostCSS plugin used for RGBA shorthand
+   * - NOTE: Rucksack PostCSS plugin used for RGBA shorthand
    *   (http://simplaio.github.io/rucksack/docs/#hexrgba)
    */
   --text-dark-primary: rgba(#000, 0.87);
@@ -55,10 +55,10 @@
 /**
 * Responsive Typography
 *
-* - Rucksack PostCSS plugin used for responsive type sizing
+* - NOTE: Rucksack PostCSS plugin used for responsive type sizing
 *   (http://simplaio.github.io/rucksack/docs/#responsive-type)
 * - font-range property based on Bootstrap's range of breakpoints
-* - Type is set using a modular scale of 1.125
+* - Type is set using a modular scale of 1.125, or 8:9
 */
 html {
   /* Override Bootstrap's 14px base font size*/
@@ -85,6 +85,19 @@ a {
 a:hover,
 a:active { color: #00478e; }
 
+.hero-panel {
+  background: url('../img/hero-image.jpg') no-repeat center center;
+  background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.hero-heading {
+  font-size: responsive;
+  text-shadow: 0 0 4px rgba(#000, .2);
+  font-weight: 300;
+  min-font-size: 1.774rem; /* 1.996 2.245 */
+  max-font-size: 3.247rem; /* 2.886 3.247*/
+}
 
 h1, .h1 {
   font-weight: 500;
@@ -105,13 +118,13 @@ h3, .h3 {
   max-font-size: 1.802rem;
 }
 h4, .h4 {
-  font-weight: 500;
+  font-weight: 400;
   font-size: responsive;
   min-font-size: 1.246rem;
   max-font-size: 1.602rem;
 }
 h5, .h5 {
-  font-weight: 500;
+  font-weight: 400;
   font-size: responsive;
   min-font-size: 1.107rem;
   max-font-size: 1.424rem;
@@ -135,7 +148,7 @@ h6, .h6 {
  * the largest breakpoint while allowing full-width background colors & images.
  */
 .container-fixed-content {
-  padding: 1em 1em;
+  padding: 1em;
 }
 
 @media only screen and (min-width : 1200px) {
@@ -211,7 +224,8 @@ h6, .h6 {
   float: right;
 }
 
-.color-group .dark { color: var(--text-dark-primary); }
+.dark { color: var(--text-dark-primary); }
+.light { color: var(--text-light-primary); }
 
 .primary-100 { background-color: var(--primary-100); }
 .primary-300 { background-color: var(--primary-300); }
