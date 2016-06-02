@@ -3,69 +3,70 @@
    ========================================================================== */
 
 :root {
-  /* base colors - palette dynamically generated based on these values */
-  --premera-blue: #0082ca;
-  --yellow: #799900;
-  --lime: #799900;
+/**
+ * Base Color Palette
+ *
+ * Tints and shades are generated from these values
+ */
 
+  --color-primary: #0082ca; /* Premera blue */
+  --color-secondary: #f6b221; /* lime */
+  /* alt. secondary color - yellow */
+  /*--color-secondary: #799900;*/
 
-  --primary-100: color(var(--premera-blue) tint(60%));
-  --primary-300: color(var(--premera-blue) tint(20%));
-  --primary-500: var(--premera-blue);
-  --primary-700: color(var(--premera-blue) shade(25%));
-  --primary-900: color(var(--premera-blue) shade(60%));
+  --primary-100: color(var(--color-primary) tint(60%));
+  --primary-300: color(var(--color-primary) tint(20%));
+  --primary-500: var(--color-primary);
+  --primary-700: color(var(--color-primary) shade(25%));
+  --primary-900: color(var(--color-primary) shade(60%));
 
-  --accent-200: color(var(--yellow) tint(40%));
-  --accent-500: var(--yellow);
-  --accent-900: color(var(--yellow) shade(60%));
+  --accent-200: color(var(--color-secondary) tint(40%));
+  --accent-500: var(--color-secondary);
+  --accent-900: color(var(--color-secondary) shade(60%));
 
-  --gray-100: rgba(0, 0, 0, 0.04);
-  --gray-300: rgba(0, 0, 0, 0.12);
-  --gray-500: rgba(0, 0, 0, 0.38);
-  --gray-600: rgba(0, 0, 0, 0.54);
-  --gray-900: rgba(0, 0, 0, 0.87);
+  /**
+   * Text Colors
+   *
+   * Taken from Google Material Design guidelines
+   * (http://www.google.com/design/spec/style/color.html#color-text-background-colors)
+   */
+  --text-dark-primary: rgba(0, 0, 0, 0.87);
+  --text-dark-secondary: rgba(0, 0, 0, 0.54);
+  --text-dark-disabled: rgba(0, 0, 0, 0.38);
+
+  --text-light-primary: rgba(255, 255, 255, 0.87);
+  --text-light-secondary: rgba(255, 255, 255, 0.54);
+  --text-light-disabled: rgba(255, 255, 255, 0.38);
+
+  --gray-100: #f5f5f5;
+  --gray-300: #e0e0e0;
+  --gray-500: #9e9e9e;
+  --gray-600: #757575;
+  --gray-900: #212121;
 }
-
-
-/* temporary! for testing out color palette values */
-[class^="base-"],
-[class^="accent-"],
-[class^="gray-"] {
-  height: 80px;
-}
-.base-0 { background-color: var(--primary-100); }
-.base-1 { background-color: var(--primary-300); }
-.base-2 { background-color: var(--primary-500); }
-.base-3 { background-color: var(--primary-700); }
-.base-4 { background-color: var(--primary-900); }
-.accent-0 { background-color: var(--accent-200); }
-.accent-1 { background-color: var(--accent-500); }
-.accent-2 { background-color: var(--accent-900); }
-.gray-0 { background-color: var(--gray-100); }
-.gray-1 { background-color: var(--gray-300); }
-.gray-2 { background-color: var(--gray-500); }
-.gray-3 { background-color: var(--gray-600); }
-.gray-4 { background-color: var(--gray-900); }
 
 
 /* ==========================================================================
    Typography
    ========================================================================== */
 
- /**
-  * Responsive Typography
-  *
-  * - Rucksack PostCSS plugin used for generating values
-  *   (http://simplaio.github.io/rucksack/docs/#responsive-type)
-  * - font-range property based on Bootstrap's range of breakpoints
-  * - Type is set using a modular scale of 1.125
-  */
-html, body {
+/**
+* Responsive Typography
+*
+* - Rucksack PostCSS plugin used for generating values
+*   (http://simplaio.github.io/rucksack/docs/#responsive-type)
+* - font-range property based on Bootstrap's range of breakpoints
+* - Type is set using a modular scale of 1.125
+*/
+html {
   /* Override Bootstrap's 14px base font size*/
   font-size: 16px;
+}
+body {
   font-family: 'Roboto';
-  color: var(--gray-900);
+  color: var(--text-dark-primary);
   line-height: 1.5;
+  font-weight: 300;
 
   /* Rucksack properties */
   font-size: responsive;
@@ -75,36 +76,46 @@ html, body {
   upper-font-range: 1200px;
 }
 
-a { color: #0066CC; }
+a {
+  color: #0066CC;
+  font-weight: 400;
+}
 a:hover,
 a:active { color: #00478e; }
 
-h1 {
+
+h1, .h1 {
+  font-weight: 500;
   font-size: responsive;
   min-font-size: 1.774rem;
   max-font-size: 2.281rem;
 }
-h2 {
+h2, .h2 {
+  font-weight: 400;
   font-size: responsive;
   min-font-size: 1.577rem;
   max-font-size: 2.027rem;
 }
-h3 {
+h3, .h3 {
+  font-weight: 400;
   font-size: responsive;
   min-font-size: 1.402rem;
   max-font-size: 1.802rem;
 }
-h4 {
+h4, .h4 {
+  font-weight: 500;
   font-size: responsive;
   min-font-size: 1.246rem;
   max-font-size: 1.602rem;
 }
-h5 {
+h5, .h5 {
+  font-weight: 500;
   font-size: responsive;
   min-font-size: 1.107rem;
   max-font-size: 1.424rem;
 }
-h6 {
+h6, .h6 {
+  font-weight: 500;
   font-size: responsive;
   min-font-size: 0.984rem;
   max-font-size: 1.266rem;
@@ -122,13 +133,28 @@ h6 {
  * the largest breakpoint while allowing full-width background colors & images.
  */
 .container-fixed-content {
-  padding: 1em;
+  padding: 1em 1em;
 }
 
 @media only screen and (min-width : 1200px) {
   .container-fixed-content {
     padding: 1em calc(50% - 568px);
   }
+}
+
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+.pbc-card {
+  margin-bottom: .5rem;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow:
+    0 2px 2px 0 rgba(0,0,0,.14),
+    0 3px 1px -2px rgba(0,0,0,.2),
+    0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 
@@ -159,11 +185,44 @@ h6 {
 
 
 /* ==========================================================================
-   Temporary Junk
+   Style Guide Related
+   TODO: Move to separate stylesheet so it doesn't bloat main styles
    ========================================================================== */
-
-/* will be replaced with Google CDN link */
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts-new/roboto.woff');
+.color-group {
+  color: var(--text-light-primary);
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 2px;
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0 0 1rem;
+  padding: 0;
 }
+.color-group li {
+  padding: 1em;
+  font-size: inherit;
+}
+.color-group .main-color {
+  border-bottom: 4px solid #fff;
+}
+.color-group .hex {
+  float: right;
+}
+
+.color-group .dark { color: var(--text-dark-primary); }
+
+.primary-100 { background-color: var(--primary-100); }
+.primary-300 { background-color: var(--primary-300); }
+.primary-500 { background-color: var(--primary-500); }
+.primary-700 { background-color: var(--primary-700); }
+.primary-900 { background-color: var(--primary-900); }
+
+.accent-200 { background-color: var(--accent-200); }
+.accent-500 { background-color: var(--accent-500); }
+.accent-900 { background-color: var(--accent-900); }
+
+.gray-100 { background-color: var(--gray-100); }
+.gray-300 { background-color: var(--gray-300); }
+.gray-500 { background-color: var(--gray-500); }
+.gray-600 { background-color: var(--gray-600); }
+.gray-900 { background-color: var(--gray-900); }
