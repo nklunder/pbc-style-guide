@@ -135,13 +135,19 @@ h6, .h6 {
  * Used with Bootstrap's '.container-fluid'. Constrains content to the width of
  * the largest breakpoint while allowing full-width background colors & images.
  */
-.container-fixed-content {
-  padding: 1em;
+[class^='container-fixed'] {
+  padding: 1rem;
+}
+
+@media only screen and (min-width : 992px) {
+  .container-fixed-992 {
+    padding: 1rem calc(50% - 464px);
+  }
 }
 
 @media only screen and (min-width : 1200px) {
-  .container-fixed-content {
-    padding: 1em calc(50% - 568px);
+  .container-fixed-1200 {
+    padding: 1rem calc(50% - 568px);
   }
 }
 
@@ -160,12 +166,14 @@ h6, .h6 {
     0 1px 5px 0 rgba(0,0,0,.12);
 }
 
-.container-img-full {
+.container-hero {
   background: url('../img/hero-image.jpg') no-repeat center center;
   background-size: cover;
-  padding: 8rem calc(50% - 568px);
 }
+
 .hero-heading {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   font-size: responsive;
   text-shadow: 0 0 6px rgba(#000, .4);
   font-weight: 500;
