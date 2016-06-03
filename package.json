@@ -6,6 +6,8 @@
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "2.12.10",
+    "css-mqpacker": "5.0.1",
+    "cssnano": "3.6.2",
     "del": "2.2.0",
     "gulp": "3.9.1",
     "gulp-postcss": "6.1.1",

@@ -85,19 +85,7 @@ a {
 a:hover,
 a:active { color: #00478e; }
 
-.hero-panel {
-  background: url('../img/hero-image.jpg') no-repeat center center;
-  background-size: cover;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
-.hero-heading {
-  font-size: responsive;
-  text-shadow: 0 0 4px rgba(#000, .2);
-  font-weight: 300;
-  min-font-size: 1.774rem; /* 1.996 2.245 */
-  max-font-size: 3.247rem; /* 2.886 3.247*/
-}
+
 
 h1, .h1 {
   font-weight: 500;
@@ -172,7 +160,19 @@ h6, .h6 {
     0 1px 5px 0 rgba(0,0,0,.12);
 }
 
-
+.container-img-full {
+  background: url('../img/hero-image.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 8rem calc(50% - 568px);
+}
+.hero-heading {
+  font-size: responsive;
+  text-shadow: 0 0 6px rgba(#000, .4);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  min-font-size: 1.774rem; /* 1.996 2.245 */
+  max-font-size: 3.247rem; /* 2.886 3.247*/
+}
 /* ==========================================================================
    Global media query rules
    ========================================================================== */
