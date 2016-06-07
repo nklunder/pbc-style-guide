@@ -169,25 +169,40 @@ h6, .h6 {
     0 3px 1px -2px rgba(0,0,0,.2),
     0 1px 5px 0 rgba(0,0,0,.12);
 }
-.pbc-card-content {
+
+.pbc-card__content {
   padding: 1.5rem;
 }
-.pbc-card-buttons {
-  padding: 0 1.5rem .75rem 1rem;
-}
-.pbc-card-expand {
-  font-size: 1.2rem;
-  line-height: 2.25rem;
-  height: 2.25rem;
+.pbc-card__content p:last-child {
+  margin-bottom: 0;
 }
 
-.pbc-card-expand-content {
+.pbc-card__buttons {
   padding: 0 1.5rem 1rem;
 }
+.pbc-card__expand-link {
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 2.25rem;
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
+.pbc-card__expand-content {
+  padding: 0 1.5rem 0;
+}
+.pbc-card__expand-content p:last-child {
+  margin-bottom: 1.5rem;
+}
+
+
+
 .container-hero {
   background: url('../img/hero-image.jpg') no-repeat center center;
   background-size: cover;
 }
+
+
 
 .hero-heading {
   padding-top: 6rem;
