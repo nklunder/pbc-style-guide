@@ -85,7 +85,11 @@ a {
 a:hover,
 a:active { color: #00478e; }
 
-
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
 
 h1, .h1 {
   font-weight: 500;
@@ -165,7 +169,21 @@ h6, .h6 {
     0 3px 1px -2px rgba(0,0,0,.2),
     0 1px 5px 0 rgba(0,0,0,.12);
 }
+.pbc-card-content {
+  padding: 1.5rem;
+}
+.pbc-card-buttons {
+  padding: 0 1.5rem .75rem 1rem;
+}
+.pbc-card-expand {
+  font-size: 1.2rem;
+  line-height: 2.25rem;
+  height: 2.25rem;
+}
 
+.pbc-card-expand-content {
+  padding: 0 1.5rem 1rem;
+}
 .container-hero {
   background: url('../img/hero-image.jpg') no-repeat center center;
   background-size: cover;
@@ -181,6 +199,8 @@ h6, .h6 {
   min-font-size: 1.774rem; /* 1.996 2.245 */
   max-font-size: 3.247rem; /* 2.886 3.247*/
 }
+
+
 /* ==========================================================================
    Global media query rules
    ========================================================================== */
