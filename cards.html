@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Cards</title>
@@ -8,36 +9,62 @@
   <link rel="stylesheet" href="src/css/fonts-new.css">
   <link rel="stylesheet" href="build/style.css">
 </head>
+
 <body>
   <div class="container-fluid container-fixed-1200">
     <h1>Cards</h1>
+
     <div class="row">
+
       <div class="col-sm-4">
 
         <div class="pbc-card">
-          <img src="img/hero-image.jpg" alt="" class="img-responsive">
+          <img src="img/hero-16x9.jpg" alt="" class="img-responsive">
           <div class="pbc-card__content">
+            <div class="pbc-card__icon"></div>
             <h2 class="h5">Headline</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.</p>
           </div>
           <div class="pbc-card__buttons">
-            <button class="btn btn-default">test</button>
-            <button class="btn btn-default">test</button>
-            <a data-toggle="collapse" href="#expandContent" class="pull-right pbc-card__expand-link">
-              <span class="icon icon-expand-less"></span>
+            <button class="pbc-btn pbc-btn-secondary">See our plans</button>
+            <button class="pbc-btn pbc-btn-secondary">Eat a potato</button>
+            <a data-toggle="collapse" href="#expandContent2" class="pull-right collapsed pbc-btn pbc-btn-expand">
+              <span class="icon icon-expand-more"></span>
             </a>
           </div>
-          <div class="pbc-card__expand-content collapse" id="expandContent">
+          <div class="pbc-card__expand-content collapse" id="expandContent2">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt optio architecto quod consequuntur repellendus dolor officia alias. Magnam vel tempora ducimus ipsum eligendi praesentium temporibus soluta veniam beatae.</p>
-          </div
-        </div>
+          </div </div>
 
+        </div>
       </div>
-    </div>
+      <div class="col-sm-4">
+
+        <div class="pbc-card">
+          <div class="pbc-card__image"></div>
+          <div class="pbc-card__content">
+
+            <h2 class="h5 pbc-card__heading">Headline</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.</p>
+          </div>
+          <div class="pbc-card__buttons">
+            <button class="pbc-btn pbc-btn-primary">Clicky click</button>
+            <button class="pbc-btn pbc-btn-default">I'm a button</button>
+            <a data-toggle="collapse" href="#expandContent3" class="pull-right collapsed pbc-card__expand-link">
+              <span class="icon icon-expand-more"></span>
+            </a>
+          </div>
+          <div class="pbc-card__expand-content collapse" id="expandContent3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt optio architecto quod consequuntur repellendus dolor officia alias. Magnam vel tempora ducimus ipsum eligendi praesentium temporibus soluta veniam beatae.</p>
+          </div </div>
+
+        </div>
+      </div>
     </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
+
 </html>

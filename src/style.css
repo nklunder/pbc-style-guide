@@ -3,26 +3,17 @@
    ========================================================================== */
 
 :root {
-/**
- * Base Color Palette
- *
- * Tints and shades are generated from these values
- */
+/* Base Color Palette */
 
-  --color-primary: #0082ca; /* Premera blue */
-  --color-secondary: #f6b221; /* lime */
-  /* alt. secondary color - yellow */
-  /*--color-secondary: #799900;*/
+  --primary-500: #0082ca; /* Premera blue */
+  --primary-100: color(var(--primary-500) tint(60%));
+  --primary-300: color(var(--primary-500) tint(20%));
+  --primary-700: color(var(--primary-500) shade(25%));
+  --primary-900: color(var(--primary-500) shade(60%));
 
-  --primary-100: color(var(--color-primary) tint(60%));
-  --primary-300: color(var(--color-primary) tint(20%));
-  --primary-500: var(--color-primary);
-  --primary-700: color(var(--color-primary) shade(25%));
-  --primary-900: color(var(--color-primary) shade(60%));
-
-  --accent-200: color(var(--color-secondary) tint(40%));
-  --accent-500: var(--color-secondary);
-  --accent-900: color(var(--color-secondary) shade(60%));
+  --accent-200: #F8D281;
+  --accent-500: #F6B221;
+  --accent-700: #7F2D00;
 
   /**
    * Text Colors
@@ -41,6 +32,7 @@
   --text-light-disabled: rgba(#fff, 0.5);
 
   --gray-100: #f5f5f5;
+  --gray-200: #eeeeee;
   --gray-300: #e0e0e0;
   --gray-500: #9e9e9e;
   --gray-600: #757575;
@@ -84,12 +76,6 @@ a {
 }
 a:hover,
 a:active { color: #00478e; }
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 1rem;
-  margin-top: 0;
-}
 
 h1, .h1 {
   font-weight: 500;
@@ -139,9 +125,7 @@ h6, .h6 {
  * Used with Bootstrap's '.container-fluid'. Constrains content to the width of
  * the largest breakpoint while allowing full-width background colors & images.
  */
-[class^='container-fixed'] {
-  padding: 1rem;
-}
+[class^='container-fixed'] { padding: 1rem; }
 
 @media only screen and (min-width : 992px) {
   .container-fixed-992 {
@@ -160,6 +144,8 @@ h6, .h6 {
    Components
    ========================================================================== */
 
+/* PBC Card
+   ========================================================================== */
 .pbc-card {
   overflow: hidden;
   margin-bottom: .5rem;
@@ -169,30 +155,125 @@ h6, .h6 {
     0 3px 1px -2px rgba(0,0,0,.2),
     0 1px 5px 0 rgba(0,0,0,.12);
 }
-
+.pbc-card__image {
+  background-image: url('../img/hero-image.jpg');
+  background-position: center center;
+  min-height: 14em;
+  background-size: cover;
+}
+.pbc-card__icon {
+  height: 3rem;
+  width: 3rem;
+  margin-bottom: 1.5em;
+  /* temporary styles for testing*/
+  background-color: lime;
+  border-radius: 50%;
+}
+.pbc-card__heading {
+  margin-top: 0;
+  margin-bottom: .79em;
+}
 .pbc-card__content {
-  padding: 1.5rem;
+  padding: 1.5em;
 }
 .pbc-card__content p:last-child {
   margin-bottom: 0;
 }
 
 .pbc-card__buttons {
-  padding: 0 1.5rem 1rem;
+  padding: 0 1em 1em;
 }
-.pbc-card__expand-link {
-  width: 2.25rem;
-  height: 2.25rem;
-  text-align: center;
-  font-size: 1.25rem;
-  line-height: 2.25rem;
+.pbc-card .pbc-btn-secondary {
+  padding: 0 .5em;
+  margin: 0 .5rem 0 0;
 }
 
 .pbc-card__expand-content {
-  padding: 0 1.5rem 0;
+  padding: 0 1.5em 0;
 }
 .pbc-card__expand-content p:last-child {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5em;
+}
+
+/* PBC Buttons
+   ========================================================================== */
+.pbc-btn {
+  height: 2.25rem;
+  line-height: 2.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0 1em;
+  margin: 0 .5rem 1rem 0;
+  border-radius: 2px;
+  border: none;
+  box-shadow:
+    0 2px 2px 0 rgba(0,0,0,.14),
+    0 3px 1px -2px rgba(0,0,0,.2),
+    0 1px 5px 0 rgba(0,0,0,.12);
+  transition:
+    background-color .1s ease-out,
+    height .1s ease-out,
+    box-shadow .3s ease-out;
+}
+.pbc-btn:last-child {
+  margin: 0;
+}
+.pbc-btn:hover,
+.pbc-btn:focus {
+  outline: none;
+  text-decoration: none;
+}
+.pbc-btn:active {
+  box-shadow:
+    0 4px 5px 0 rgba(0,0,0,.14),
+    0 1px 10px 0 rgba(0,0,0,.12),
+    0 2px 4px -1px rgba(0,0,0,.2);
+}
+
+.pbc-btn-primary {
+  background-color: var(--accent-500);
+}
+.pbc-btn-primary:active {
+  /*background-color: var(--accent-200);*/
+}
+
+.pbc-btn-default {
+  box-shadow: 0 1px 3px var(--text-dark-disabled);
+  background-color: var(--gray-100);
+}
+.pbc-btn-default:active {
+  /*background-color: var(--gray-300);*/
+}
+
+.pbc-btn-secondary {
+  color: var(--accent-700);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.pbc-btn-secondary:hover,
+.pbc-btn-expand:hover {
+  color: var(--accent-700);
+  background-color: var(--gray-300);
+}
+.pbc-btn-secondary:active,
+.pbc-btn-expand:active {
+  box-shadow: none;
+  background-color: var(--gray-500);
+}
+
+.pbc-btn-expand {
+  padding: 0;
+  color: var(--accent-700);
+  width: 2.25rem;
+  text-align: center;
+  box-shadow: none;
+}
+.pbc-btn-expand:focus {
+  color: var(--accent-700);
+}
+.pbc-btn-expand.collapsed {
+  transform: rotateX(180deg);
 }
 
 
@@ -278,7 +359,7 @@ h6, .h6 {
 
 .accent-200 { background-color: var(--accent-200); }
 .accent-500 { background-color: var(--accent-500); }
-.accent-900 { background-color: var(--accent-900); }
+.accent-700 { background-color: var(--accent-700); }
 
 .gray-100 { background-color: var(--gray-100); }
 .gray-300 { background-color: var(--gray-300); }
