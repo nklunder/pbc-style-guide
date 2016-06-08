@@ -27,8 +27,8 @@ gulp.task('style', function() {
     cssNext(),
     rucksack(),
     // TODO: move these plugins to a 'build' task
-    mqPacker(),
-    cssNano({ autoprefixer: false })
+    mqPacker()
+    // cssNano({ autoprefixer: false })
   ];
 
   return gulp.src('./src/style.css')
