@@ -71,6 +71,11 @@ body {
   upper-font-range: 1200px;
 }
 
+small, .small {
+  color: var(--text-dark-secondary);
+  font-size: .8em;
+}
+
 a {
   color: #0066CC;
   font-weight: 400;
@@ -126,6 +131,8 @@ h6, .h6 {
  * Used with Bootstrap's '.container-fluid'. Constrains content to the width of
  * the largest breakpoint while allowing full-width background colors & images.
  */
+
+/* default padding when smaller than fixed size, & fallback for old browsers*/
 [class^='container-fixed'] { padding: 1rem; }
 
 @media only screen and (min-width : 992px) {
