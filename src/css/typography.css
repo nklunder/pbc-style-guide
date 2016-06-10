@@ -67,5 +67,5 @@ h4 {
 
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts-new/roboto.woff'); /* IE9 Compat Modes */
+  src: url('../fonts/roboto.woff'); /* IE9 Compat Modes */
 }

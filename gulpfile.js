@@ -14,12 +14,19 @@ gulp.task('clean', function () {
 gulp.task('serve', function() {
   browserSync.init({
     server: {
-      baseDir: "./"
+      baseDir: "./build/"
     }
   });
 
   gulp.watch("./src/**/*.css", ['style']);
-  gulp.watch("./*.html").on('change', browserSync.reload);
+  gulp.watch('.src/**/*.js', ['scripts']);
+  gulp.watch("./src/*.html").on('change', browserSync.reload);
+});
+
+gulp.task('markup', function() {
+  return gulp.src('./src/*.html')
+    .pipe(gulp.dest('./build/'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('style', function() {
@@ -29,10 +36,34 @@ gulp.task('style', function() {
     mqPacker()
   ];
 
-  return gulp.src('./src/style.css')
+  return gulp.src('./src/css/**/*.css')
     .pipe(postCSS(processors))
-    .pipe(gulp.dest('./build'))
+    .pipe(gulp.dest('./build/css/'))
     .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['clean', 'style', 'serve']);
+gulp.task('scripts', function () {
+  return gulp.src('./src/js/*.js')
+    .pipe(gulp.dest('./build/js/'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('images', function () {
+  return gulp.src('./src/img/*.*')
+    .pipe(gulp.dest('./build/img/'));
+});
+
+gulp.task('fonts', function () {
+  return gulp.src('./src/fonts/*.*')
+    .pipe(gulp.dest('./build/fonts/'));
+});
+
+gulp.task('default', [
+  'clean',
+  'markup',
+  'style',
+  'scripts',
+  'images',
+  'fonts',
+  'serve'
+]);
