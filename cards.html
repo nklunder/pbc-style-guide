@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,400italic,100' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="src/css/fonts-new.css">
+  <link rel="stylesheet" href="src/css/prism.css">
   <link rel="stylesheet" href="build/style.css">
 </head>
 
@@ -22,7 +23,7 @@
           <img src="img/hero-16x9.jpg" alt="" class="img-responsive">
           <div class="pbc-card__content">
             <div class="pbc-card__icon"></div>
-            <h2 class="h5">This is a header</h2>
+            <h2 class="h5 pbc-card__heading">This is a header</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.</p>
           </div>
           <div class="pbc-card__buttons">
@@ -82,7 +83,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-8"><pre><code>&lt;div class="pbc-card">
+      <div class="col-sm-8 language-html"><pre><code>&lt;div class="pbc-card">
   &lt;img src="..." alt="..." class="img-responsive">
   &lt;div class="pbc-card__content">
     &lt;p>
@@ -104,9 +105,9 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-8"><pre><code>&lt;div class="pbc-card">
+      <div class="col-sm-8 language-html"><pre><code>&lt;div class="pbc-card">
   &lt;img src="..." alt="..." class="img-responsive">
-  &lt;h2 class="h5">This is a header&lt;/h2>
+  &lt;h2 class="h5 pbc-card__heading">This is a header&lt;/h2>
   &lt;div class="pbc-card__content">
     &lt;p>
       ...
@@ -122,7 +123,7 @@
         <div class="pbc-card">
           <img src="img/hero-16x9.jpg" alt="" class="img-responsive">
           <div class="pbc-card__content">
-            <h2 class="h5">This is a header</h2>
+            <h2 class="h5 pbc-card__heading">This is a header</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.</p>
           </div>
           <div class="pbc-card__buttons">
@@ -131,7 +132,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-8"><pre><code>&lt;div class="pbc-card">
+      <div class="col-sm-8 language-html"><pre><code>&lt;div class="pbc-card">
   &lt;img src="..." alt="..." class="img-responsive">
   &lt;h2 class="h5">This is a header&lt;/h2>
   &lt;div class="pbc-card__content">
@@ -153,7 +154,7 @@
         <div class="pbc-card">
           <img src="img/hero-16x9.jpg" alt="" class="img-responsive">
           <div class="pbc-card__content">
-            <h2 class="h5">This is a header</h2>
+            <h2 class="h5 pbc-card__heading">This is a header</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.</p>
           </div>
           <div class="pbc-card__buttons">
@@ -168,6 +169,28 @@
           </div>
         </div>
       </div>
+      <div class="col-sm-8 language-html"><pre><code>&lt;div class="pbc-card">
+  &lt;img src="..." alt="..." class="img-responsive">
+  &lt;div class="pbc-card__content">
+    &lt;h2 class="h5 pbc-card__heading">This is a header&lt;/h2>
+    &lt;p>
+      ...
+    &lt;/p>
+  &lt;/div>
+  &lt;div class="pbc-card__buttons">
+    &lt;button class="pbc-btn pbc-btn-secondary">Button&lt;/button>
+    &lt;button class="pbc-btn pbc-btn-secondary">Button&lt;/button>
+    &lt;a data-toggle="collapse" href="#content-id" class="pull-right collapsed pbc-btn pbc-btn-expand">
+      &lt;span class="icon icon-expand-more">&lt;/span>
+    &lt;/a>
+  &lt;/div>
+  &lt;div class="pbc-card__expand-content collapse" id="content-id">
+    &lt;p>
+      ...
+    &lt;/p>
+  &lt;/div>
+&lt;/div></code></pre>
+      </div>
     </div> <!-- end card 5 row -->
 
     <h2>Card 5</h2>
@@ -176,7 +199,7 @@
         <div class="pbc-card">
           <img src="img/hero-16x9.jpg" alt="" class="img-responsive">
           <div class="pbc-card__content">
-            <h2 class="h5">This is a header</h2>
+            <h2 class="h5 pbc-card__heading">This is a header</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.</p>
           </div>
           <div class="pbc-card__buttons">
@@ -185,13 +208,54 @@
           </div>
         </div>
       </div>
+      <div class="col-sm-8 language-html"><pre><code>&lt;div class="pbc-card">
+  &lt;img src="..." alt="..." class="img-responsive">
+  &lt;div class="pbc-card__content">
+    &lt;h2 class="h5 pbc-card__heading">This is a header&lt;/h2>
+    &lt;p>
+      ...
+    &lt;/p>
+  &lt;/div>
+  &lt;div class="pbc-card__buttons">
+    &lt;button class="pbc-btn pbc-btn-secondary">Button&lt;/button>
+    &lt;button class="pbc-btn pbc-btn-secondary">Button&lt;/button>
+  &lt;/div>
+  &lt;div class="pbc-card__expand-content collapse" id="content-id">
+    &lt;p>
+      ...
+    &lt;/p>
+  &lt;/div>
+&lt;/div></code></pre>
+      </div>
     </div> <!-- end card 5 row -->
+
+    <h2>Card 6</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="pbc-card" data-aspect-ratio="16:9">
+          <div class="pbc-card__img-bg text-light" style="background-image: url('img/hero-16x9.jpg')">
+            <h2 class="h5 pbc-card__heading">This is a heading</h2>
+            <p>This card component will have a maximum character rule.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8 language-html"><pre><code>&lt;div class="pbc-card" data-aspect-ratio="16:9">
+  &lt;div class="pbc-card__img-bg text-light" style="background-image: url('...')">
+    &lt;h2 class="h5 pbc-card__heading">This is a heading&lt;/h2>
+    &lt;p>
+      ...
+    &lt;/p>
+  &lt;/div>
+&lt;/div></code></pre>
+      </div>
+    </div>
 
   </div> <!-- end page container -->
 
 
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="src/js/prism.js"></script>
 </body>
 
 </html>
