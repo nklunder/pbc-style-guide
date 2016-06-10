@@ -170,20 +170,27 @@ h6, .h6 {
   background-size: cover;
 }
 
-.pbc-card__img-bg {
-  padding: 1em;
+.pbc-card--img-bg {
   background-size: cover;
   background-position: center;
 }
+.pbc-card--img-bg .pbc-card__content {
+  padding: 1em;
+}
+
 
 .pbc-card__icon {
   height: 3rem;
   width: 3rem;
   margin-bottom: 1.5em;
   /* temporary styles for testing*/
-  background-color: gold;
+  background-color: var(--primary-500);
   border-radius: 50%;
 }
+.pbc-card__icon--margin-sm {
+  margin-bottom: 1em;
+}
+
 .pbc-card__heading {
   margin-top: 0;
   margin-bottom: .79em;

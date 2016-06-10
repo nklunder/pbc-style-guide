@@ -100,14 +100,14 @@
         <div class="pbc-card">
           <img src="img/hero-16x9.jpg" alt="" class="img-responsive">
           <div class="pbc-card__content">
-            <h2 class="h5">This is a header</h2>
+            <h2 class="h5 pbc-card__heading">This is a header</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.</p>
           </div>
         </div>
       </div>
       <div class="col-sm-8 language-html"><pre><code>&lt;div class="pbc-card">
   &lt;img src="..." alt="..." class="img-responsive">
-  &lt;h2 class="h5 pbc-card__heading">This is a header&lt;/h2>
+  &lt;h2 class="h5 pbc-card__heading">...&lt;/h2>
   &lt;div class="pbc-card__content">
     &lt;p>
       ...
@@ -134,7 +134,7 @@
       </div>
       <div class="col-sm-8 language-html"><pre><code>&lt;div class="pbc-card">
   &lt;img src="..." alt="..." class="img-responsive">
-  &lt;h2 class="h5">This is a header&lt;/h2>
+  &lt;h2 class="h5">...&lt;/h2>
   &lt;div class="pbc-card__content">
     &lt;p>
       ...
@@ -172,7 +172,7 @@
       <div class="col-sm-8 language-html"><pre><code>&lt;div class="pbc-card">
   &lt;img src="..." alt="..." class="img-responsive">
   &lt;div class="pbc-card__content">
-    &lt;h2 class="h5 pbc-card__heading">This is a header&lt;/h2>
+    &lt;h2 class="h5 pbc-card__heading">...&lt;/h2>
     &lt;p>
       ...
     &lt;/p>
@@ -211,7 +211,7 @@
       <div class="col-sm-8 language-html"><pre><code>&lt;div class="pbc-card">
   &lt;img src="..." alt="..." class="img-responsive">
   &lt;div class="pbc-card__content">
-    &lt;h2 class="h5 pbc-card__heading">This is a header&lt;/h2>
+    &lt;h2 class="h5 pbc-card__heading">...&lt;/h2>
     &lt;p>
       ...
     &lt;/p>
@@ -232,16 +232,39 @@
     <h2>Card 6</h2>
     <div class="row">
       <div class="col-sm-4">
-        <div class="pbc-card" data-aspect-ratio="16:9">
-          <div class="pbc-card__img-bg text-light" style="background-image: url('img/hero-16x9.jpg')">
+        <div class="pbc-card pbc-card--img-bg text-light"
+             data-aspect-ratio="16:9"
+             style="background-image: url('img/hero-16x9.jpg')">
+          <div class="pbc-card__content">
             <h2 class="h5 pbc-card__heading">This is a heading</h2>
             <p>This card component will have a maximum character rule.</p>
           </div>
         </div>
       </div>
-      <div class="col-sm-8 language-html"><pre><code>&lt;div class="pbc-card" data-aspect-ratio="16:9">
-  &lt;div class="pbc-card__img-bg text-light" style="background-image: url('...')">
-    &lt;h2 class="h5 pbc-card__heading">This is a heading&lt;/h2>
+  <div class="col-sm-8 language-html"><pre><code>&lt;div class="pbc-card pbc-card--img-bg text-light"
+    data-aspect-ratio="16:9"
+    style="background-image: url('...')">
+  &lt;div class="pbc-card__content">
+    &lt;h2 class="h5 pbc-card__heading">...&lt;/h2>
+    &lt;p>This card component will have a maximum character rule.&lt;/p>
+  &lt;/div>
+&lt;/div></code></pre>
+      </div>
+    </div> <!-- end card 6 row -->
+
+    <h2>Card 7</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="pbc-card">
+          <div class="pbc-card__content">
+            <div class="pbc-card__icon pbc-card__icon--margin-sm"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti commodi molestias facere nihil optio minima enim, illum hic quasi, corporis doloremque obcaecati tenetur laudantium illo sit, explicabo error tempore accusantium!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8 language-html"><pre><code>&lt;div class="pbc-card">
+  &lt;div class="pbc-card__content">
+    &lt;div class="pbc-card__icon pbc-card__icon--margin-sm">&lt;/div>
     &lt;p>
       ...
     &lt;/p>
