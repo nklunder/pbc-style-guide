@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var pug = require('gulp-pug');
 var postCSS = require('gulp-postcss');
 var cssNext = require('postcss-cssnext');
 var rucksack = require('rucksack-css');
@@ -23,8 +24,9 @@ gulp.task('serve', function() {
   gulp.watch("./src/*.html", ['markup']);
 });
 
-gulp.task('markup', function() {
-  return gulp.src('./src/*.html')
+gulp.task('views', function () {
+  return gulp.src('./src/pug/**/!(_)*.pug')
+    .pipe(pug({ pretty: true }))
     .pipe(gulp.dest('./build/'))
     .pipe(browserSync.stream());
 });
@@ -60,7 +62,7 @@ gulp.task('fonts', function () {
 
 gulp.task('default', [
   'clean',
-  'markup',
+  'views',
   'style',
   'scripts',
   'images',

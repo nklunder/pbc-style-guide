@@ -1,0 +1,81 @@
+doctype html
+html(lang='en')
+  include ./includes/_head
+  body
+    include ./includes/_sidebarNav
+    .main-content.container-fluid
+      .container-fluid.container-hero
+        .row.hero-heading
+          .col-sm-offset-1.col-sm-10.col-md-offset-2.col-md-8.text-center
+            h1.light Hero Header that is pretty long to test the character limit
+
+      .container-fixed-992
+        .row
+          .col-xs-12
+            h1 Typography
+            hr
+            h1 Heading Level 1
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque aliquid modi aut obcaecati iusto ipsa, repellendus dolores voluptatum deserunt. Esse iste delectus ut reprehenderit cum ea, aut nam dignissimos exercitationem!
+            button.pbc-btn.pbc-btn-primary Clicky click
+            button.pbc-btn.pbc-btn-default I'm a button
+            button.pbc-btn.pbc-btn-secondary Another one
+            h2 Heading Level 2
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ipsa velit dolorem iusto porro dolor impedit, beatae neque fugit cum nulla, iure et maiores nemo accusamus nihil, quia, omnis vero?
+            h3 Heading Level 3
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum doloremque numquam sapiente, ullam modi magnam! Est cumque, suscipit asperiores saepe, culpa magni ducimus repellendus eum minima, ullam facilis non corporis.
+            h4 Heading Level 4
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quisquam error minima ullam! Sit ea numquam, nihil, totam modi suscipit quia architecto beatae perferendis, alias id quisquam quos. Temporibus, assumenda?
+            h5 Heading Level 5
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quas officiis explicabo ad pariatur doloribus nemo ipsam cumque repellendus cupiditate neque quibusdam minima maxime fugiat consequuntur, quisquam quos. Libero, laboriosam.
+            h6 Heading Level 6
+            p
+              | Lorem ipsum dolor sit amet, #[a(href='')] consectetur adipisicing elit. Quam aliquam nesciunt inventore consequatur dolores delectus architecto corrupti neque laboriosam sed error qui officiis deserunt ex, enim #[a(href='')] expedita quo nam ullam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit quae nobis ex, atque harum, vitae, sed eum quisquam doloribus fuga debitis! Itaque suscipit voluptatum ut expedita aliquid nostrum repudiandae voluptate!
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni tenetur culpa optio, ratione ex laboriosam sed! Reprehenderit assumenda tempora ipsam repellat, laudantium similique excepturi, exercitationem fugiat, placeat ex adipisci.
+
+            h4 Paragraph of small text
+            p.small
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium quos unde veniam repudiandae distinctio vitae aliquam aliquid, voluptatem doloribus repellat, saepe consectetur harum, doloremque provident! Odio fugit aut modi quia.
+
+      .container-fixed-1200
+        img.img-responsive(src='img/hero-image.jpg', alt='')
+
+      .container-fixed-992
+        .row
+          .col-xs-8
+            h1 Narrower columns for readablity
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum modi dignissimos repellendus quos praesentium quasi quo dicta distinctio tenetur, commodi ad?
+
+      .container-fixed-992
+        .row
+          .col-sm-6
+            h2 Two columns
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum officia doloremque recusandae vero ex doloribus nulla. Quia illo natus fugit, praesentium repellat voluptas, laudantium reiciendis necessitatibus ullam aperiam impedit ab.
+          .col-sm-6
+            h2 side by side
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam iste maiores quod ipsa quam mollitia magnam natus reiciendis, quis eveniet minus molestiae sunt voluptate quia similique non sequi, unde quae.
+
+      .container-fixed-992.gray-100
+        .row
+          .col-sm-4
+            h2 Do we even
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum officia doloremque recusandae vero ex doloribus nulla. Quia illo natus fugit, praesentium repellat voluptas, laudantium reiciendis necessitatibus ullam aperiam impedit ab.
+          .col-sm-4
+            h2 need
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam iste maiores quod ipsa quam mollitia magnam natus reiciendis, quis eveniet minus molestiae sunt voluptate quia similique non sequi, unde quae.
+          .col-sm-4
+            h2 three columns?
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam iste maiores quod ipsa quam mollitia magnam natus reiciendis, quis eveniet minus molestiae sunt voluptate quia similique non sequi, unde quae.
+
+    include ./includes/_scripts
