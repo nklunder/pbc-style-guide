@@ -1,0 +1,58 @@
+doctype html
+html(lang='en')
+  include ./includes/_head
+  body
+    include ./includes/_sidebarNav
+    .main-content.container-fluid
+      h1 Alerts
+      p
+        | Alerts provide #[strong contextual feedback messages for typical user actions], as well as alerting them to important information they may need to know. Information and warning messages usually appear at the top of a page, under the Success and error messages might appear above a form. Use the appropriate color to match the purpose of your message.
+
+      h3 Guidelines
+      ul
+        li Keep alerts to 55-75 characters including spaces
+        li Use only one alert per page
+        li Alerts should have a time limit and be removed promptly
+
+      h3 Example alerts
+      h4 Success:
+      .alert.alert-success
+        span.icon-checkmark-circle2
+        strong Well done.
+        |  You successfully filled out this form.
+      p
+        strong When to use:
+        |  Success messages such as properly submitting a form
+
+      h4 Warning:
+      .alert.alert-warning
+        span.icon-warning2
+        strong Important!
+        |  Choose an in-network primary care provider to help lower your healthcare costs.
+      p
+        strong When to use:
+        |  Warning messages such as letting members know they need a primary care physician before seeing a doctor
+
+      h4 Danger:
+      .alert.alert-danger
+        span.icon-warning2
+        strong Error:
+        |  Missing info
+      p
+        strong When to use:
+        |  Error messages such as filling out a form incorrectly; when we won’t let user progress any further without providing the requested info, or when user is being given a chance to make a decision that is irreversible,
+        |       hard to change, or has legal implications (for example, granting permissions for claims access).
+      h3 More information on error messages
+      p
+        | When users get an error message, they are probably feeling confused, stressed, frustrated, even angry.
+
+      h4 Tips
+      ul
+        li Offer a solution or next step.
+        li Be straightforward. Explain what's going on right away.
+        li Be calm. Don’t use exclamation points or alarming words like “alert” or "immediately."
+        li Be serious. Don’t joke around with people who are frustrated.
+
+
+
+    include ./includes/_scripts

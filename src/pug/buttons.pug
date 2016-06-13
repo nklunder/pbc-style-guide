@@ -1,0 +1,84 @@
+doctype html
+html(lang='en')
+  include ./includes/_head
+  body
+    include ./includes/_sidebarNav
+    .main-content.container-fluid
+      h1 Buttons
+      p
+        | Buttons are a visually focused mechanism for taking action. To be most effective, they must be easily discovered and their intent immediately understood. They require a visual treatment that sets them apart from other non-actionable content on the screen, through shape, color and placement. Labels must be clear, simple, and descriptive.
+      p
+        | There are two main categories of buttons: action and navigation. They have different visual treatments because they have different intents. Action buttons are for interacting with the site and the data within. Navigation buttons are for going to a new location within the site.
+      p
+        | Button labels are sentence case. The labels should be descriptive enough to be clear, but not so wordy that the button becomes jarringly large.
+      p
+        | More information on buttons can be found in the #[a(href='http://getbootstrap.com/css/#buttons', target='_blank') Bootstrap documentation].
+
+      h2 Button Types
+      p
+        | Button styles apply to both the #[code button] and #[code a] elements.
+      .row
+        .col-sm-4
+          p
+            button.pbc-btn.pbc-btn-default Default button
+          p
+            code &lt;button class="pbc-btn pbc-btn-default">Primary button&lt;/button>
+          p
+            | Use the default button style when button does not represent the primary action on the page.
+        .col-sm-4
+          p
+            button.pbc-btn.pbc-btn-primary Primary button
+          p
+            code &lt;button class="pbc-btn pbc-btn-primary">Primary button&lt;/button>
+          p
+            | Use the primary button style when needing to call attention to that action, i.e. you want the customer to click on this. Primary buttons should only be used
+            strong once
+            |  per page.
+        .col-sm-4
+          p
+            button.pbc-btn.pbc-btn-secondary Secondary button
+          p
+            code &lt;button class="pbc-btn pbc-btn-link">Secondary button&lt;/button>
+          p
+            | The secondary button style is used for buttons whose action needs to be deemphasized (e.g., the cancel button on a form).
+      h2 Formatting
+      p Button labels are sentence case.
+      .row
+        .col-sm-6
+          p
+            span.label.label-success Correct
+            |  Only first word is capitalized.
+          p
+            button.pbc-btn.pbc-btn-default(href='#') Get a quote
+        .col-sm-6
+          p
+            span.label.label-danger Incorrect
+            |  All major words are capitalized.
+          p
+            button.pbc-btn.pbc-btn-default(href='#') Get A Quote
+      h2 Text
+      p
+        | The labels should be descriptive enough to be clear, but not so wordy that the button becomes jarringly large. Aim for a maximum of 3 words.
+      .row
+        .col-sm-6
+          p
+            span.label.label-success Correct
+            |  Button's intent is clear without relying on context.
+          p
+            button.pbc-btn.pbc-btn-default Save changes
+            button.pbc-btn.pbc-btn-default Learn about discounts
+        .col-sm-6
+          p
+            span.label.label-danger Incorrect
+            |  Button labels are too vague.
+          p
+            button.pbc-btn.pbc-btn-default Learn more
+            button.pbc-btn.pbc-btn-default Click here
+          p
+            span.label.label-danger Incorrect
+            |  Button label is verbose.
+          p
+            button.pbc-btn.pbc-btn-default Find the right health plan for you and your family
+
+
+    include ./includes/_scripts

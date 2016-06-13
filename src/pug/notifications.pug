@@ -1,0 +1,52 @@
+doctype html
+html(lang='en')
+  include ./includes/_head
+  body
+    include ./includes/_sidebarNav
+    .main-content.container-fluid
+      h2 Notifications
+      p
+        | Notifications are used to display static information that is relevant to all users of the site, such as scheduled site maintenance or a company closure. For maximum readibility across all devices, notifications should be no more than 140 characters in length and the most important information should be in bold.
+
+      h3 Primary notification
+      p
+        | There should only be one primary notification on a page. It should be placed before any other page content, just after the main navigation.
+      .panel.panel-primary
+        .panel-body.text-primary
+          | On #[strong Saturday, May 14], Premera.com will be unavailable starting at 4 p.m. Pacific time for planned maintenance. We expect the work to take 8 hours. We appreciate your patience while we work hard to make our site better!
+      .language-html
+        pre
+          code
+            | &lt;div class="panel panel-primary"&gt;
+            |   &lt;div class="panel-body text-primary"&gt;
+            |     On &lt;strong&gt;Saturday, May 14&lt;/strong&gt;, Premera.com will be unavailable starting at 4 p.m. Pacific time for planned maintenance. We expect the work to take 8 hours. We appreciate your patience while we work hard to make our site better!
+            |   &lt;/div&gt;
+            | &lt;/div&gt;
+
+      h3 Secondary Notifications
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur temporibus nostrum, ab saepe repudiandae odit nam recusandae beatae pariatur, quo molestiae maiores corrupti tempora repellat maxime, sed reprehenderit laborum! Eligendi!
+      .row
+        .col-sm-6
+          h2 Notification Title
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias rerum, doloribus illo rem, incidunt quia aliquid quod exercitationem.
+        .col-sm-6
+          h2 Notification Title
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias rerum, doloribus illo rem, incidunt quia aliquid quod exercitationem.
+      .row.padding-bottom
+        .col-sm-6
+          h3 Character count helper
+          p
+            span#msg-char-count 140
+            |  characters remaining
+          textarea#char-count-textarea.form-control(maxlength='140', rows='5')
+      .row
+        .col-xs-12
+          #copy-btn.btn.btn-primary Copy text to clipboard
+
+    script(src='./js/charCountHelper.js')
+
+
+    include ./includes/_scripts

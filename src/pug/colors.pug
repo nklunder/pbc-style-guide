@@ -1,0 +1,113 @@
+doctype html
+html(lang='en')
+  include ./includes/_head
+  body
+    include ./includes/_sidebarNav
+    .main-content.container-fluid
+      h1 Premera Color Palette
+      .row
+        .col-sm-4
+          ul.color-group
+            li.main-color.primary-500
+              h5 Pantone Process Blue C
+              | Premera Blue
+              span.hex #0082CA
+            li.primary-100.text-dark
+              | 100
+              span.hex #99CDEA
+            li.primary-300.text-dark
+              | 300
+              span.hex #339BD5
+            li.primary-500
+              | 500
+              span.hex #0082CA
+            li.primary-700
+              | 700
+              span.hex #006298
+            li.primary-900
+              | 900
+              span.hex #003451
+        .col-sm-4
+          ul.color-group
+            li.main-color.gray-500.text-dark
+              h5 38% Gray
+              | Grayscale
+              span.hex #9E9E9E
+            li.gray-100.text-dark
+              | 100
+              span.hex #F5F5F5
+            li.gray-300.text-dark
+              | 300
+              span.hex #E0E0E0
+            li.gray-500.text-dark
+              | 500
+              span.hex #9E9E9E
+            li.gray-600
+              | 600
+              span.hex #757575
+            li.gray-900
+              | 900
+              span.hex #212121
+        .col-sm-4
+          ul.color-group
+            li.main-color.text-dark(style='background-color: #f6b221;')
+              h5 Pantone 7409 C
+              | Accent Yellow
+              span.hex #F6B221
+            li.text-dark(style='background-color: #f8d281;')
+              | A 200
+              span.hex #F8D281
+            li.text-dark(style='background-color: #f6b221;')
+              | A 500
+              span.hex #F6B221
+            li(style='background-color: #7f2d00;')
+              | A 700
+              span.hex #7F2D00
+      // end color groups row 1
+      .row
+        .col-sm-4
+          ul.color-group
+            li.main-color(style='background-color: #b3272d;')
+              h5 Pantone 1805 C
+              | Alert Red
+              span.hex #B3272D
+            li.text-dark(style='background-color: #d07b82;')
+              | A 200
+              span.hex #D07B82
+            li(style='background-color: #b3272d;')
+              | A 500
+              span.hex #B3272D
+        .col-sm-4
+          ul.color-group
+            li.main-color(style='background-color: #f15a24')
+              h5 Pantone Process Orange
+              | Alert Orange
+              span.hex #F15A24
+            li.text-dark(style='background-color: #E69E6C;')
+              | A 200
+              span.hex #E69E6C
+            li.text-dark(style='background-color: #F15A24;')
+              | A 500
+              span.hex #F15A24
+        .col-sm-4
+          ul.color-group
+            li.main-color.text-dark(style='background-color: #8cc63f')
+              h5 Pantone Process Lime
+              | Alert Lime
+              span.hex #8CC63F
+            li.text-dark(style='background-color: #badd8c;')
+              | A 200
+              span.hex #BADD8C
+            li.text-dark(style='background-color: #8cc63f;')
+              | A 500
+              span.hex #8CC63F
+      // end color groups row 2
+      h4 Primary color-500
+      p
+        | When using a primary color in your palette, this color should be the most widely used across all screens and components.
+      h4 Secondary color (Accent)-500
+      p
+        | Palettes with a secondary color may use this color to indicate a related action or information.
+
+
+    include ./includes/_scripts
