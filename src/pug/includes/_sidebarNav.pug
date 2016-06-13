@@ -13,9 +13,8 @@
 .fixed-sidebar
   ul.fixed-sidebar__nav
     each url, page in pages
-      if page === currentPage
-        li.selected
-          a(href= url + '.html')= page
-      else
-        li
-          a(href= url + '.html')= page
+      li
+        if page === currentPage
+          a.selected(href=url + '.html')= page
+        else
+          a(href=url + '.html')= page

@@ -444,14 +444,24 @@ h6, .h6 {
   list-style: none;
   padding: 0;
 }
-.fixed-sidebar__nav li {
+.fixed-sidebar__nav li a {
   padding: .4em 1em;
+  width: 100%;
+  display: inline-block;
 }
-.fixed-sidebar .selected {
+.fixed-sidebar__nav a:hover:not(.selected) {
+  background-color: #F5F5F5;
+}
+.fixed-sidebar a.selected {
   background-color: #757575;
-}
-.fixed-sidebar .selected a {
   color: var(--text-light-primary) !important;
+}
+.fixed-sidebar a:hover {
+  text-decoration: none;
+}
+.fixed-sidebar a:active,
+.fixed-sidebar a:focus {
+  outline: 0;
 }
 
 [class^='icon-'] {

@@ -1,4 +1,44 @@
-- var currentPage = 'Icons'
+-
+  var currentPage = 'Icons'
+  var icons = {
+    system: {
+      'icon-calendar': 'calendar',
+      'icon-close': 'close',
+      'icon-completed': 'completed',
+      'icon-delete': 'delete',
+      'icon-edit': 'edit',
+      'icon-expand-less': 'expand less',
+      'icon-expand-more': 'expand more',
+      'icon-travel-coverage': 'flight travel coverage',
+      'icon-info': 'info',
+      'icon-mail': 'mail',
+      'icon-medical': 'medical',
+      'icon-menu': 'menu',
+      'icon-more': 'more',
+      'icon-naviagate-before': 'navigate before',
+      'icon-naviagate-next': 'navigate next',
+      'icon-phone': 'telephone',
+      'icon-user': 'user',
+      'icon-search': 'search magnifying glass',
+      'icon-smartphone': 'smartphone android iphone ios'
+    },
+    custom: {
+      'icon-benefits': 'benefits',
+      'icon-calculator': 'calculator',
+      'icon-chart': 'chart',
+      'icon-claims': 'claims',
+      'icon-discounts': 'discounts',
+      'icon-dollar': 'dollar money price',
+      'icon-health-apple': 'health apple',
+      'icon-health-savings': 'health savings',
+      'icon-id-card': 'id card',
+      'icon-large-group': 'large group employer',
+      'icon-nurseline': 'nurseline',
+      'icon-pill': 'pill medication prescriptions',
+      'icon-stethoscope': 'stethoscope'
+    }
+  }
+
 doctype html
 html(lang='en')
   include ./includes/_head
@@ -67,9 +107,11 @@ html(lang='en')
       h2 Sizing
       p
         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, autem voluptatibus ad a, odit voluptatum neque, assumenda aliquam nobis, vero distinctio deserunt voluptates eveniet voluptatem rerum quisquam commodi? Dolores, blanditiis!
+
       h2 Colors
       p
         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias ab amet aperiam, dolore accusamus. Eius repudiandae aut doloremque repellat, nulla velit eos fugiat distinctio fuga veritatis explicabo cupiditate libero, quo!
+
       h2 Icon usage within UI components
       p
         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, quidem, consequatur! Id labore eius placeat nemo error dolor explicabo voluptates. Aut quidem, cupiditate blanditiis. Fuga aliquid quos soluta sed quas!
@@ -81,108 +123,18 @@ html(lang='en')
 
       h3 System
       .row
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='calendar')
-          span.icon-calendar
-          p icon-calendar
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='close')
-          span.icon-close
-          p icon-close
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='completed')
-          span.icon-completed
-          p icon-completed
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='delete')
-          span.icon-delete
-          p icon-delete
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='edit')
-          span.icon-edit
-          p icon-edit
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='expand-less')
-          span.icon-expand-less
-          p icon-expand-less
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='expand-more')
-          span.icon-expand-more
-          p icon-expand-more
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='flight travel coverage')
-          span.icon-travel-coverage
-          p icon-travel-coverage
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='info')
-          span.icon-info
-          p icon-info
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='mail')
-          span.icon-mail
-          p icon-mail
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='medical')
-          span.icon-medical
-          p icon-medical
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='menu')
-          span.icon-menu
-          p icon-menu
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='more')
-          span.icon-more
-          p icon-more
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='naviagate-before')
-          span.icon-naviagate-before
-          p icon-navigate-before
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='naviagate-next')
-          span.icon-naviagate-next
-          p icon-navigate-next
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='telephone')
-          span.icon-phone
-          p icon-phone
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='user')
-          span.icon-user
-          p icon-user
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='search magnifying glass')
-          span.icon-search
-          p icon-search
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='smartphone iphone android')
-          span.icon-smartphone
-          p icon-smartphone
+        each keywords, icon in icons.system
+          .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords=keywords)
+            span(class=icon)
+            p #{icon}
 
       h3 Custom
       .row
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='benefits')
-          span.icon-benefits
-          p icon-benefits
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='calculator')
-          span.icon-calculator
-          p icon-calculator
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='chart')
-          span.icon-chart
-          p icon-chart
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='claims')
-          span.icon-claims
-          p icon-claims
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='discounts')
-          span.icon-discounts
-          p icon-discounts
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='money dollar')
-          span.icon-dollar
-          p icon-dollar
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='health appler')
-          span.icon-health-apple
-          p icon-health-apple
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='health-savings')
-          span.icon-health-savings
-          p icon-health-savings
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='id card')
-          span.icon-id-card
-          p icon-id-card
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='health-savings')
-          span.icon-health-savings
-          p icon-health-savings
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='large group')
-          span.icon-large-group
-          p icon-large-group
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='nurseline')
-          span.icon-nurseline
-          p icon-nurseline
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='pill')
-          span.icon-pill
-          p icon-pill
-        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='stethoscope')
-          span.icon-stethoscope
-          p icon-stethoscope
+        each keywords, icon in icons.custom
+          .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords=keywords)
+            span(class=icon)
+            p #{icon}
+
 
     script(src='./js/iconFilter.js')
 
