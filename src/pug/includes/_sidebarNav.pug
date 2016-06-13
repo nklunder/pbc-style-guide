@@ -1,18 +1,21 @@
+-
+  var pages = {
+    'Home': 'index',
+    'Alerts': 'alerts',
+    'Buttons': 'buttons',
+    'Cards': 'cards',
+    'Colors': 'colors',
+    'Icons': 'icons',
+    'Notifications': 'notifications',
+    'Typography': 'typography'
+  };
+
 .fixed-sidebar
   ul.fixed-sidebar__nav
-    li
-      a(href='index.html') Home
-    li
-      a(href='alerts.html') Alerts
-    li
-      a(href='buttons.html') Buttons
-    li
-      a(href='cards.html') Cards
-    li
-      a(href='colors.html') Colors
-    li
-      a(href='icons.html') Icons
-    li
-      a(href='notifications.html') Notifications
-    li
-      a(href='typography.html') Typography
+    each url, page  in pages
+      if page === currentPage
+        li.selected
+          a(href= url + '.html')= page
+      else
+        li
+          a(href= url + '.html')= page
