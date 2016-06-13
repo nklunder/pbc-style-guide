@@ -19,9 +19,9 @@ gulp.task('serve', function() {
     }
   });
 
-  gulp.watch("./src/**/*.css", ['style']);
-  gulp.watch('.src/**/*.js', ['scripts']);
-  gulp.watch("./src/*.html", ['markup']);
+  gulp.watch("./src/css/**/*.css", ['style']);
+  gulp.watch('.src/js/**/*.js', ['scripts']);
+  gulp.watch("./src/pug/**/*.pug", ['views']);
 });
 
 gulp.task('views', function () {

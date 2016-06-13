@@ -1,0 +1,189 @@
+doctype html
+html(lang='en')
+  include ./includes/_head
+  body
+    include ./includes/_sidebarNav
+    .main-content.container-fluid
+      h1 Iconography
+
+      h2 What is an icon?
+      p
+        | An icon is a graphical representation of an application that, when clicked on, will trigger a particular action. Generally, icons represent objects, tools, actions or desired results.
+
+      h3 Icon usage
+      p
+        | The overuse of icons can increase cognitive load for users. The more icons you use, the less attention they draw. Consider whether adding an icon to the interface increases usability and clarity. Use them when space requires it, to communicate status, or to help differentiate object.
+
+      h3 Design principles
+      p
+        | Shapes are bold and geometric. Symmetry and consistency of shapes give the icons a unique quality, while keeping them simple and bold. Icons can be used in the web, Android, iOS and WP applications. The design is inspired by #[a(href='https://www.google.com/design/spec/style/icons.html') Google Material Design].
+
+      h3 Types of icons
+      ol
+        li
+          p
+            strong Custom icons:
+            |  Custom icons are the visual expression of the brand’s products, services, and tools. Simple, bold, and friendly, they communicate the core idea and intent of a product. While each custom icon is visually distinct, all custom icons for a given brand are unified through concept and execution.
+          p
+            | Examples:
+            span.icon.icon-XXXX
+            span.icon.icon-XXXX
+            span.icon.icon-XXXX
+        li
+          p
+            strong System icons:
+            |  A system icon, or UI icon, symbolizes a command, file, device, or directory. System icons are also used to represent common actions.
+          p
+            | Examples:
+            span.icon.icon-XXXX
+            span.icon.icon-XXXX
+            span.icon.icon-XXXX
+      p
+        a(href='#icon-library') Premera Icon Library
+
+      h2 Grid system
+      p
+        | The icon grid has been developed to facilitate consistency and establish a clear set of rules for the positioning of graphic elements. This standardization results in a flexible but coherent system.
+
+      h3 Grid
+      .row
+        .col-xs-6
+          img.img-responsive(src='img/grid.png', alt='')
+      h3 Keyline
+      h4 Square and circle
+      .row
+        .col-xs-6
+          img.img-responsive(src='img/grid-square.png', alt='')
+        .col-xs-6
+          img.img-responsive(src='img/grid-circle.png', alt='')
+      h4 Verticle and horizontal rectangle
+      .row
+        .col-xs-6
+          img.img-responsive(src='img/grid-horizontal.png', alt='')
+        .col-xs-6
+          img.img-responsive(src='img/grid-vertical.png', alt='')
+
+      h2 Sizing
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, autem voluptatibus ad a, odit voluptatum neque, assumenda aliquam nobis, vero distinctio deserunt voluptates eveniet voluptatem rerum quisquam commodi? Dolores, blanditiis!
+      h2 Colors
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias ab amet aperiam, dolore accusamus. Eius repudiandae aut doloremque repellat, nulla velit eos fugiat distinctio fuga veritatis explicabo cupiditate libero, quo!
+      h2 Icon usage within UI components
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, quidem, consequatur! Id labore eius placeat nemo error dolor explicabo voluptates. Aut quidem, cupiditate blanditiis. Fuga aliquid quos soluta sed quas!
+
+      h2#icon-library Icon library
+      .input-group
+        label(for='icon-search') filter
+        input#icon-search.form-control(type='text')
+
+      h3 System
+      .row
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='calendar')
+          span.icon-calendar
+          p icon-calendar
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='close')
+          span.icon-close
+          p icon-close
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='completed')
+          span.icon-completed
+          p icon-completed
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='delete')
+          span.icon-delete
+          p icon-delete
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='edit')
+          span.icon-edit
+          p icon-edit
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='expand-less')
+          span.icon-expand-less
+          p icon-expand-less
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='expand-more')
+          span.icon-expand-more
+          p icon-expand-more
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='flight travel coverage')
+          span.icon-travel-coverage
+          p icon-travel-coverage
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='info')
+          span.icon-info
+          p icon-info
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='mail')
+          span.icon-mail
+          p icon-mail
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='medical')
+          span.icon-medical
+          p icon-medical
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='menu')
+          span.icon-menu
+          p icon-menu
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='more')
+          span.icon-more
+          p icon-more
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='naviagate-before')
+          span.icon-naviagate-before
+          p icon-navigate-before
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='naviagate-next')
+          span.icon-naviagate-next
+          p icon-navigate-next
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='telephone')
+          span.icon-phone
+          p icon-phone
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='user')
+          span.icon-user
+          p icon-user
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='search magnifying glass')
+          span.icon-search
+          p icon-search
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='smartphone iphone android')
+          span.icon-smartphone
+          p icon-smartphone
+
+      h3 Custom
+      .row
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='benefits')
+          span.icon-benefits
+          p icon-benefits
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='calculator')
+          span.icon-calculator
+          p icon-calculator
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='chart')
+          span.icon-chart
+          p icon-chart
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='claims')
+          span.icon-claims
+          p icon-claims
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='discounts')
+          span.icon-discounts
+          p icon-discounts
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='money dollar')
+          span.icon-dollar
+          p icon-dollar
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='health appler')
+          span.icon-health-apple
+          p icon-health-apple
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='health-savings')
+          span.icon-health-savings
+          p icon-health-savings
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='id card')
+          span.icon-id-card
+          p icon-id-card
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='health-savings')
+          span.icon-health-savings
+          p icon-health-savings
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='large group')
+          span.icon-large-group
+          p icon-large-group
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='nurseline')
+          span.icon-nurseline
+          p icon-nurseline
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='pill')
+          span.icon-pill
+          p icon-pill
+        .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords='stethoscope')
+          span.icon-stethoscope
+          p icon-stethoscope
+
+    script(src='./js/iconFilter.js')
+
+
+    include ./includes/_scripts

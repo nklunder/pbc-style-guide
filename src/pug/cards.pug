@@ -161,7 +161,6 @@ html(lang='en')
       .row
         .col-sm-4
           .pbc-card
-            img.img-responsive(src='/img/hero-16x9.jpg', alt='')
             .pbc-card__content
               h2.h5.pbc-card__heading This is a header
               p
@@ -178,7 +177,6 @@ html(lang='en')
           pre
             code
               | &lt;div class="pbc-card">
-              |   &lt;img src="..." alt="..." class="img-responsive">
               |   &lt;div class="pbc-card__content">
               |     &lt;h2 class="h5 pbc-card__heading">...&lt;/h2>
               |     &lt;p>
@@ -211,7 +209,14 @@ html(lang='en')
         .col-sm-8.language-html
           pre
             code
-              |
+              | &lt;div class="pbc-card pbc-card--img-bg text-light"
+              |         data-aspect-ratio="16:9"
+              |         style="background-image: url('...')">
+              |   &lt;div class="pbc-card__content">
+              |     &lt;h2 class="h5 pbc-card__heading">...&lt;/h2>
+              |     &lt;p>This card component will have a maximum character rule.&lt;/p>
+              |   &lt;/div>
+              | &lt;/div>
       // end card 6
 
       h2 Card 7
@@ -225,7 +230,14 @@ html(lang='en')
         .col-sm-8.language-html
           pre
             code
-              |
+              | &lt;div class="pbc-card">
+              |   &lt;div class="pbc-card__content">
+              |     &lt;div class="pbc-card__icon pbc-card__icon--margin-sm">&lt;/div>
+              |     &lt;p>
+              |       ...
+              |     &lt;/p>
+              |   &lt;/div>
+              | &lt;/div>
       // end card 7
 
 
