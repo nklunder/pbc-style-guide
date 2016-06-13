@@ -20,7 +20,7 @@ gulp.task('serve', function() {
 
   gulp.watch("./src/**/*.css", ['style']);
   gulp.watch('.src/**/*.js', ['scripts']);
-  gulp.watch("./src/*.html").on('change', browserSync.reload);
+  gulp.watch("./src/*.html", ['markup']);
 });
 
 gulp.task('markup', function() {
