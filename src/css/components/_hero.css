@@ -1,0 +1,15 @@
+.container-hero {
+  background: url('../img/hero-image.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.hero-heading {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  font-size: responsive;
+  text-shadow: 0 0 6px rgba(#000, .4);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  min-font-size: 1.774rem;
+  max-font-size: 3.247rem;
+}

@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+* Responsive Typography
+*
+* - NOTE: Rucksack PostCSS plugin used for responsive type sizing
+*   (http://simplaio.github.io/rucksack/docs/#responsive-type)
+* - font-range property based on Bootstrap's range of breakpoints
+* - Type is set using a modular scale of 1.125, or 8:9
+*/
+html {
+  /* Override Bootstrap's 14px base font size*/
+  font-size: 16px;
+}
+body {
+  font-family: 'Roboto';
+  color: var(--text-dark-primary);
+  line-height: 1.5;
+  font-weight: 300;
+  background-color: #fafafa;
+
+  /* Rucksack properties */
+  font-size: responsive;
+  min-font-size: 0.875rem;
+  max-font-size: 1.125rem;
+  lower-font-range: 480px;
+  upper-font-range: 1200px;
+}
+
+small, .small {
+  color: var(--text-dark-secondary);
+  font-size: .8em;
+}
+
+a {
+  color: #0066CC;
+  font-weight: 400;
+}
+a:hover,
+a:active { color: #00478e; }
+
+h1, .h1 {
+  font-weight: 500;
+  font-size: responsive;
+  min-font-size: 1.774rem;
+  max-font-size: 2.281rem;
+}
+h2, .h2 {
+  font-weight: 400;
+  font-size: responsive;
+  min-font-size: 1.577rem;
+  max-font-size: 2.027rem;
+}
+h3, .h3 {
+  font-weight: 400;
+  font-size: responsive;
+  min-font-size: 1.402rem;
+  max-font-size: 1.802rem;
+}
+h4, .h4 {
+  font-weight: 400;
+  font-size: responsive;
+  min-font-size: 1.246rem;
+  max-font-size: 1.602rem;
+}
+h5, .h5 {
+  font-weight: 400;
+  font-size: responsive;
+  min-font-size: 1.107rem;
+  max-font-size: 1.424rem;
+}
+h6, .h6 {
+  font-weight: 500;
+  font-size: responsive;
+  min-font-size: 0.984rem;
+  max-font-size: 1.266rem;
+}

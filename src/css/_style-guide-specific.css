@@ -1,0 +1,87 @@
+.color-group {
+  color: var(--text-light-primary);
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 2px;
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+.color-group li {
+  padding: 1em;
+  font-size: inherit;
+}
+.color-group .main-color {
+  border-bottom: 4px solid #fff;
+}
+.color-group .hex {
+  float: right;
+}
+
+.primary-100 { background-color: var(--primary-100); }
+.primary-300 { background-color: var(--primary-300); }
+.primary-500 { background-color: var(--primary-500); }
+.primary-700 { background-color: var(--primary-700); }
+.primary-900 { background-color: var(--primary-900); }
+
+.accent-200 { background-color: var(--accent-200); }
+.accent-500 { background-color: var(--accent-500); }
+.accent-700 { background-color: var(--accent-700); }
+
+.gray-100 { background-color: var(--gray-100); }
+.gray-300 { background-color: var(--gray-300); }
+.gray-500 { background-color: var(--gray-500); }
+.gray-600 { background-color: var(--gray-600); }
+.gray-900 { background-color: var(--gray-900); }
+
+
+.fixed-sidebar { display: none; }
+@media only screen and (min-width : 768px) {
+  .fixed-sidebar {
+    position: fixed;
+    width: 14rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #E0E0E0;
+    border-right: 1px solid #eee;
+  }
+  .main-content {
+    margin-left: 14rem;
+  }
+}
+
+.fixed-sidebar__nav {
+  list-style: none;
+  padding: 0;
+}
+.fixed-sidebar__nav li a {
+  padding: .4em 1em;
+  width: 100%;
+  display: inline-block;
+}
+.fixed-sidebar__nav a:hover:not(.selected) {
+  background-color: #F5F5F5;
+}
+.fixed-sidebar a.selected {
+  background-color: #757575;
+  color: var(--text-light-primary) !important;
+}
+.fixed-sidebar a:hover {
+  text-decoration: none;
+}
+.fixed-sidebar a:active,
+.fixed-sidebar a:focus {
+  outline: 0;
+}
+
+[class^='icon-'] {
+  font-size: 48px;
+  vertical-align: middle;
+  color: rgb(0, 153, 217);
+}

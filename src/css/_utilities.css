@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+/* Aspect Ratio Data attributes
+   ========================================================================== */
+/* Allows elements to preserve their aspect ratio when scaling.
+ * Only added 16:9 for now.
+ * (http://zzzzbov.com/blag/scalable-videos-with-aspect-ratio)
+ */
+[data-aspect-ratio] {
+  position: relative;
+  display: block;
+  max-width: 100%;
+}
+[data-aspect-ratio]::before {
+  display: block;
+  content: '';
+}
+[data-aspect-ratio] > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+[data-aspect-ratio="16:9"]::before {
+  padding-top: 56.25%;
+}
+
+
+/* Typography utilities
+   ========================================================================== */
+ .text-dark { color: var(--text-dark-primary); }
+ .text-light { color: var(--text-light-primary); }
+
+
+ /* Layout utilities
+    ========================================================================== */
+ /* Used with Bootstrap's '.container-fluid'. Constrains content to the width of
+  * the largest breakpoint while allowing full-width background colors & images.
+  */
+
+ /* default padding when smaller than fixed size, & fallback for old browsers*/
+ [class^='container-fixed'] { padding: 1rem; }
+
+ @media only screen and (min-width : 992px) {
+   .container-fixed-992 {
+     padding: 1rem calc(50% - 464px);
+   }
+ }
+
+ @media only screen and (min-width : 1200px) {
+   .container-fixed-1200 {
+     padding: 1rem calc(50% - 568px);
+   }
+ }
