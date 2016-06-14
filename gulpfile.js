@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var pug = require('gulp-pug');
 var postCSS = require('gulp-postcss');
 var cssNext = require('postcss-cssnext');
+var cssImport = require('postcss-partial-import');
 var rucksack = require('rucksack-css');
 var mqPacker = require('css-mqpacker');
 var cssNano = require('cssnano');
@@ -33,12 +34,13 @@ gulp.task('views', function () {
 
 gulp.task('style', function() {
   var processors = [
+    cssImport(),
     cssNext(),
     rucksack(),
     mqPacker()
   ];
 
-  return gulp.src('./src/css/**/*.css')
+  return gulp.src('./src/css/style.css')
     .pipe(postCSS(processors))
     .pipe(gulp.dest('./build/css/'))
     .pipe(browserSync.stream());
