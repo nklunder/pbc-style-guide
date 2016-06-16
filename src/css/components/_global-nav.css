@@ -1,0 +1,70 @@
+.global-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.global-nav__utility-bar {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.global-nav__utility-bar::after {
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  left: 0;
+  display: block;
+  height: 4px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.12), transparent);
+  content: '';
+}
+.global-nav__utility-bar-links {
+
+}
+
+
+.global-nav__main {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.global-nav__main [class*='container-fixed'] {
+  padding-bottom: 0;
+}
+
+.global-nav__section-links {
+  margin-bottom: 1px;
+  padding: 0;
+}
+
+.global-nav li {
+  display: inline-block;
+}
+.global-nav a {
+  display: inline-block;
+  color: var(--text-dark-secondary);
+  transition:
+    border-bottom .15s ease-in,
+    color .1s ease;
+}
+.global-nav a {
+  padding: 0 1em .2em;
+  border-bottom: .4em solid transparent;
+}
+.global-nav a:hover {
+  color: var(--primary-500);
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: .4em solid var(--primary-500);
+}
+
+.global-nav__section-links .selected a {
+  border-bottom: .4em solid var(--primary-500);
+}
+
+
+
+.premera-logo {
+  height: 3em;
+}

@@ -2,12 +2,31 @@
 html(lang='en')
   include ./includes/_head
   body
-    .container-fixed-1200(style="background-color: peru")
-      | test
-    .container-fixed-1200(style="background-color: honeydew")
-      | test
+    .global-nav
+      .global-nav__utility-bar
+        .container-fixed-1200
+          img.premera-logo(src='img/pbc-logo.svg')
+          .global-nav__utility-bar-links.pull-right
+            li
+              a #[span.icon-user] Login / Sign up
+            li
+              a #[span.icon-phone] Contact us
+      .global-nav__main
+        .container-fixed-1200
+          ul.global-nav__section-links
+            li
+              a Item 1
+            li.selected
+              a Item 2
+            li
+              a Item 3
+            li
+              a Item 4
+            li
+              a Item 5
+            li
+              a Item 6
     .container-fixed-1200.container-hero
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cupiditate excepturi distinctio. Ipsam vero aspernatur quia molestiae. Nam reprehenderit aliquam, ex ipsum animi ab atque neque, facilis sapiente vero, cum.
     .container-fixed-1200
       .row.sm-eq-height
         .col-sm-3
@@ -38,9 +57,21 @@ html(lang='en')
                 span.icon-health-savings
               h2.pbc-card__heading.h5 This is a header
               p Est possimus vel saepe rem cumque. Consectetur ullam ducimus eum, optio saepe ipsam, amet earum fugit assumenda consequatur animi nobis repellendus? Rerum culpa quas cumque obcaecati provident tenetur ad laborum?
-
-
-
+      .row
+        .col-sm-6
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam saepe pariatur debitis hic optio corrupti minus eligendi natus cum ratione fuga non ad ullam dolore delectus, modi ea voluptas, accusantium.
+        .col-sm-6
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto veritatis fugiat harum debitis nisi eum, consequuntur minus maxime rerum, facilis accusantium sit eligendi amet quia dolor inventore aliquam, ab nulla.
+      .row
+        .col-sm-6
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam saepe pariatur debitis hic optio corrupti minus eligendi natus cum ratione fuga non ad ullam dolore delectus, modi ea voluptas, accusantium.
+        .col-sm-6
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto veritatis fugiat harum debitis nisi eum, consequuntur minus maxime rerum, facilis accusantium sit eligendi amet quia dolor inventore aliquam, ab nulla.
+      .row
+        .col-sm-6
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam saepe pariatur debitis hic optio corrupti minus eligendi natus cum ratione fuga non ad ullam dolore delectus, modi ea voluptas, accusantium.
+        .col-sm-6
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto veritatis fugiat harum debitis nisi eum, consequuntur minus maxime rerum, facilis accusantium sit eligendi amet quia dolor inventore aliquam, ab nulla.
 
 
 
