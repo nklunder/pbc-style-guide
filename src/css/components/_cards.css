@@ -6,6 +6,14 @@
     0 2px 2px 0 rgba(0,0,0,.14),
     0 3px 1px -2px rgba(0,0,0,.2),
     0 1px 5px 0 rgba(0,0,0,.12);
+  /** 
+   * Set to dislpay flex so cards with buttons will have them pinned
+   * to the bottom. Does not affect other card tyles.
+   */
+  display: flex;
+  flex-direction: column;
+  /* used for expanding clickable area of links in cards */
+  position: relative;
 }
 .pbc-card__image {
   background-image: url('../img/hero-image.jpg');
@@ -17,19 +25,40 @@
 .pbc-card--img-bg {
   background-size: cover;
   background-position: center;
+  display: block;
 }
 .pbc-card--img-bg .pbc-card__content {
   padding: 1em;
 }
 
+.pbc-card--link {
+  transition: box-shadow 0.28s cubic-bezier(0.4,0,0.2,1);
+}
+.pbc-card--link:hover {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
+}
+.pbc-card--link a {
+  color: inherit;
+  font-weight: inherit;
+}
+.pbc-card--link a:hover {
+  text-decoration: none;
+}
+.pbc-card--link a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 
 .pbc-card__icon {
-  height: 3rem;
-  width: 3rem;
+  height: 3em;
+  width: 3em;
   margin-bottom: 1.5em;
-  /* temporary styles for testing*/
-  background-color: var(--primary-500);
-  border-radius: 50%;
+  text-align: center;
 }
 .pbc-card__icon--margin-sm {
   margin-bottom: 1em;
@@ -41,6 +70,7 @@
 }
 .pbc-card__content {
   padding: 1.5em;
+  flex-grow: 1;
 }
 .pbc-card__content p:last-child {
   margin-bottom: 0;

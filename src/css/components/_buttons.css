@@ -52,13 +52,11 @@
   box-shadow: none;
 }
 
-.pbc-btn-secondary:hover,
-.pbc-btn-expand:hover {
+.pbc-btn-secondary:hover {
   color: var(--accent-700);
   background-color: var(--gray-300);
 }
-.pbc-btn-secondary:active,
-.pbc-btn-expand:active {
+.pbc-btn-secondary:active {
   box-shadow: none;
   background-color: var(--gray-500);
 }
@@ -70,9 +68,9 @@
   text-align: center;
   box-shadow: none;
 }
-.pbc-btn-expand:focus {
+.pbc-btn-secondary:focus {
   color: var(--accent-700);
 }
-.pbc-btn-expand.collapsed {
+.pbc-btn-secondary.collapsed {
   transform: rotateX(180deg);
 }

@@ -5,7 +5,8 @@
 /* Aspect Ratio Data attributes
    ========================================================================== */
 /* Allows elements to preserve their aspect ratio when scaling.
- * Only added 16:9 for now.
+ * If content is taller than the specified ratio, the element will
+ * adjust to fit.
  * (http://zzzzbov.com/blag/scalable-videos-with-aspect-ratio)
  */
 [data-aspect-ratio] {
@@ -16,17 +17,25 @@
 [data-aspect-ratio]::before {
   display: block;
   content: '';
+  float: left;
 }
-[data-aspect-ratio] > * {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
+[data-aspect-ratio]::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+[data-aspect-ratio="21:9"]::before {
+  padding-top: 42.86%;
 }
 [data-aspect-ratio="16:9"]::before {
   padding-top: 56.25%;
+}
+[data-aspect-ratio="4:3"]::before {
+  padding-top: 75%;
+}
+[data-aspect-ratio="1:1"]::before {
+  padding-top: 100%;
 }
 
 
@@ -43,7 +52,10 @@
   */
 
  /* default padding when smaller than fixed size, & fallback for old browsers*/
- [class^='container-fixed'] { padding: 1rem; }
+ [class^='container-fixed'] {
+   padding: 1rem;
+
+ }
 
  @media only screen and (min-width : 992px) {
    .container-fixed-992 {
@@ -56,3 +68,21 @@
      padding: 1rem calc(50% - 568px);
    }
  }
+
+
+
+.flex-content,
+.flex-content > * {
+  display: initial;
+}
+
+@media only screen and (min-width : 768px) {
+  .sm-eq-height,
+  .sm-eq-height > * {
+    display: flex;
+  }
+}
+.test {
+  min-height: 60px;
+  background-color: orange;
+}

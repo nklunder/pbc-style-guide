@@ -12,13 +12,14 @@ html(lang='en')
             img.img-responsive(src='img/hero-16x9.jpg', alt='')
             .pbc-card__content
               .pbc-card__icon
+                span.icon-health-apple
               h2.h5.pbc-card__heading This is a header
               p
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.
             .pbc-card__buttons
               button.pbc-btn.pbc-btn-secondary Button
               button.pbc-btn.pbc-btn-secondary Button
-              a.pull-right.collapsed.pbc-btn.pbc-btn-expand(data-toggle='collapse', href='#expandContent2')
+              a.pull-right.collapsed.pbc-btn.pbc-btn-secondary(data-toggle='collapse', href='#expandContent2')
                 span.icon.icon-expand-more
             #expandContent2.pbc-card__expand-content.collapse
               p
@@ -171,7 +172,7 @@ html(lang='en')
             .pbc-card__buttons
               button.pbc-btn.pbc-btn-secondary Button
               button.pbc-btn.pbc-btn-secondary Button
-              a.pull-right.collapsed.pbc-btn.pbc-btn-expand(data-toggle='collapse', href='#expand-example')
+              a.pull-right.collapsed.pbc-btn.pbc-btn-secondary(data-toggle='collapse', href='#expand-example')
                 span.icon.icon-expand-more
             #expand-example.pbc-card__expand-content.collapse
               p
@@ -189,7 +190,7 @@ html(lang='en')
               |     &lt;div class="pbc-card__buttons">
               |       &lt;button class="pbc-btn pbc-btn-secondary">Button&lt;/button>
               |       &lt;button class="pbc-btn pbc-btn-secondary">Button&lt;/button>
-              |       &lt;a data-toggle="collapse" href="#content-id" class="pull-right collapsed pbc-btn pbc-btn-expand">
+              |       &lt;a data-toggle="collapse" href="#content-id" class="pull-right collapsed pbc-btn pbc-btn-secondary">
               |         &lt;span class="icon icon-expand-more">&lt;/span>
               |       &lt;/a>
               |     &lt;/div>
@@ -205,7 +206,7 @@ html(lang='en')
       h2 Card 6
       .row
         .col-sm-4
-          .pbc-card.pbc-card--img-bg.text-light(data-aspect-ratio='16:9', style="background-image: url('img/hero-16x9.jpg')")
+          .pbc-card.pbc-card--img-bg.text-light(data-aspect-ratio='1:1', style="background-image: url('img/hero-16x9.jpg')")
             .pbc-card__content
               h2.h5.pbc-card__heading This is a heading
               p This card component will have a maximum character rule.
@@ -228,6 +229,7 @@ html(lang='en')
           .pbc-card
             .pbc-card__content
               .pbc-card__icon.pbc-card__icon--margin-sm
+                span.icon-benefits
               p
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti commodi molestias facere nihil optio minima enim, illum hic quasi, corporis doloremque obcaecati tenetur laudantium illo sit, explicabo error tempore accusantium!
         .col-sm-8.language-html
@@ -235,13 +237,49 @@ html(lang='en')
             code
               | &lt;div class="pbc-card">
               |   &lt;div class="pbc-card__content">
-              |     &lt;div class="pbc-card__icon pbc-card__icon--margin-sm">&lt;/div>
+              |     &lt;div class="pbc-card__icon pbc-card__icon--margin-sm">
+              |       &lt;span class="icon-benefits">&lt;/span>
+              |     &lt;/div>
               |     &lt;p>
               |       ...
               |     &lt;/p>
               |   &lt;/div>
               | &lt;/div>
       // end card 7
+      
+      hr
+        
+      .row.sm-eq-height
+                  
+        .col-sm-4
+          .pbc-card
+            img.img-responsive(src='img/hero-16x9.jpg', alt='')
+            .pbc-card__content
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem
+            .pbc-card__buttons
+              button.pbc-btn.pbc-btn-secondary Button
+              button.pbc-btn.pbc-btn-secondary Button
+
+        .col-sm-4
+          .pbc-card
+            img.img-responsive(src='img/hero-16x9.jpg', alt='')
+            .pbc-card__content
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.
+            .pbc-card__buttons
+              button.pbc-btn.pbc-btn-secondary Button
+              button.pbc-btn.pbc-btn-secondary Button
+
+        .col-sm-4
+          .pbc-card
+            img.img-responsive(src='img/hero-16x9.jpg', alt='')
+            .pbc-card__content
+              p
+                | Lorem ipsum dolor si
+            .pbc-card__buttons
+              button.pbc-btn.pbc-btn-secondary Button
+              button.pbc-btn.pbc-btn-secondary Button
 
 
     include ./includes/_scripts
