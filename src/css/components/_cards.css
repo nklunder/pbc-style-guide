@@ -26,11 +26,25 @@
 }
 
 .pbc-card--link {
-  transition: box-shadow 0.28s cubic-bezier(0.4,0,0.2,1);
+  /* change back to 'box-shadow' after tests */
+  transition: all 0.28s cubic-bezier(0.4,0,0.2,1);
+  cursor: pointer;
 }
 .pbc-card--link:hover {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
+  box-shadow:
+    0 2px 2px 0 rgba(0,0,0,0.2),
+    0 6px 10px 0 rgba(0,0,0,0.3);
 }
+/* alternative link panel styles*/
+.alt1:hover {
+  background-color: var(--gray-200);
+}
+.alt2:hover {
+  color: var(--primary-500);
+}
+
+
+
 .pbc-card--link a {
   color: inherit;
   font-weight: inherit;
@@ -39,6 +53,7 @@
   text-decoration: none;
 }
 .pbc-card--link a::before {
+  /* expands clickable area to entire card */
   position: absolute;
   top: 0;
   right: 0;
@@ -48,12 +63,7 @@
 }
 
 
-.pbc-card__image {
-  min-height: 14em;
-  background-image: url('../img/hero-image.jpg');
-  background-position: center center;
-  background-size: cover;
-}
+
 
 .pbc-card__icon {
   margin-bottom: 1.5em;

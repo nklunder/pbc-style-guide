@@ -54,7 +54,6 @@
  /* default padding when smaller than fixed size, & fallback for old browsers*/
  [class^='container-fixed'] {
    padding: 1rem;
-
  }
 
  @media only screen and (min-width : 992px) {
@@ -70,11 +69,6 @@
  }
 
 
-
-.flex-content,
-.flex-content > * {
-  display: initial;
-}
 
 @media only screen and (min-width : 768px) {
   .sm-eq-height,
