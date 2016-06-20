@@ -10,45 +10,57 @@ html(lang='en')
 
       h2 Checkbox
       p
-        label.pbc-checkbox(for='check1')
+        .pbc-toggle
           input(type='checkbox' id='check1')
-          span.pbc-checkbox__label unchecked
+          label(for='check1') unchecked
       p
-        label.pbc-checkbox
+        .pbc-toggle
           input(type='checkbox' checked)
-          span.pbc-checkbox__label checked
+          label(for='check2') checked
       p
-        label.pbc-checkbox
+        .pbc-toggle
           input(type='checkbox' disabled)
-          span.pbc-checkbox__label disabled
+          label.pbc-checkbox__label disabled
+      p
+        .pbc-toggle
+          input(type='checkbox' disabled checked)
+          label.pbc-checkbox__label disabled
 
       h2 Radio button
       p
-        label.pbc-radio
-          input(type='radio')
-          span.pbc-radio__label unchecked
+        .pbc-toggle
+          input(type='radio' id='check1')
+          label(for='check1') unchecked
       p
-        label.pbc-radio
+        .pbc-toggle
           input(type='radio' checked)
-          span.pbc-radio__label checked
+          label(for='check2') checked
       p
-        label.pbc-radio
+        .pbc-toggle
           input(type='radio' disabled)
-          span.pbc-radio__label disabled
+          label.pbc-radio__label disabled
+      p
+        .pbc-toggle
+          input(type='radio' disabled checked)
+          label.pbc-radio__label disabled
 
       h2 Switch
       p
-        label.pbc-switch
-          input(type='checkbox')
-          span.pbc-radio__label Paperless EOB
+        .pbc-toggle
+          input(type='radio' id='check1')
+          label(for='check1') unchecked
       p
-        label.pbc-switch
-          input(type='checkbox' checked)
-          span.pbc-radio__label checked
+        .pbc-toggle
+          input(type='radio' checked)
+          label(for='check2') checked
       p
-        label.pbc-switch
-          input(type='checkbox' disabled)
-          span.pbc-radio__label disabled
+        .pbc-toggle
+          input(type='radio' disabled)
+          label.pbc-radio__label disabled
+      p
+        .pbc-toggle
+          input(type='radio' disabled checked)
+          label.pbc-radio__label disabled
 
 
     include ./includes/_scripts
