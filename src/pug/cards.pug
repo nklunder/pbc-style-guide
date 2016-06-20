@@ -1,4 +1,7 @@
+include ./mixins/_cards
 - var currentPage = 'Cards'
+- var demoImg = 'img/hero-16x9.jpg'
+
 doctype html
 html(lang='en')
   include ./includes/_head
@@ -9,7 +12,7 @@ html(lang='en')
       .row
         .col-sm-4
           .pbc-card
-            img.img-responsive(src='img/hero-16x9.jpg', alt='')
+            img.img-responsive(src= demoImg)
             .pbc-card__content
               .pbc-card__icon
                 span.icon-health-apple
@@ -57,14 +60,13 @@ html(lang='en')
           p
             | The pick-up-and-move gesture may be used if it is important for the user to be able to sort cards within a collection. But consider if filtering or sorting would better organize the content.
 
+
       h2 Card 1
       .row
         .col-sm-4
-          .pbc-card
-            img.img-responsive(src='img/hero-16x9.jpg', alt='')
-            .pbc-card__content
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.
+          +card1(demoImg)
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.
+
         .col-sm-8.language-html
           pre
             code
@@ -78,15 +80,13 @@ html(lang='en')
               | &lt;/div>
       // end card 1
 
+
       h2 Card 2
       .row
         .col-sm-4
-          .pbc-card
-            img.img-responsive(src='img/hero-16x9.jpg', alt='')
-            .pbc-card__content
-              h2.h5.pbc-card__heading This is a header
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.
+          +card2(demoImg, 'This is a header')
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas praesentium eius deleniti, deserunt, repellendus sapiente temporibus illo quas consequatur tempora debitis molestias minus vero veritatis blanditiis illum architecto mollitia, aspernatur.
+
         .col-sm-8.language-html
           pre
             code
@@ -101,18 +101,12 @@ html(lang='en')
               | &lt;/div>
       // end card 2
 
+
       h2 Card 3
       .row
         .col-sm-4
-          .pbc-card
-            img.img-responsive(src='img/hero-16x9.jpg', alt='')
-            .pbc-card__content
-              h2.h5.pbc-card__heading This is a header
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.
-            .pbc-card__buttons
-              button.pbc-btn.pbc-btn-secondary Button
-              button.pbc-btn.pbc-btn-secondary Button
+          +card3(demoImg, 'This is a heading', 'Left label', 'Right label')
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quos enim eos fuga expedita reprehenderit aut, cupiditate esse id, ab repudiandae veniam est nisi dolore provident nesciunt numquam recusandae libero?
         .col-sm-8.language-html
           pre
             code
@@ -131,18 +125,13 @@ html(lang='en')
               | &lt;/div>
       // end card 3
 
+
       h2 Card 4
       .row
         .col-sm-4
-          .pbc-card
-            img.img-responsive(src='img/hero-16x9.jpg', alt='')
-            .pbc-card__content
-              h2.h5.pbc-card__heading This is a header
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.
-            .pbc-card__buttons
-              button.pbc-btn.pbc-btn-secondary Button
-              button.pbc-btn.pbc-btn-secondary Button
+          +card4(demoImg, 'This is a header', 'Left label', 'Right label', 'demoExpand')
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur facere cumque in consequuntur quia magni impedit ipsam nam animi, modi, aperiam! Quos possimus, nobis minima aliquam ipsum rem vitae labore.
+                      
         .col-sm-8.language-html
           pre
             code
@@ -157,26 +146,26 @@ html(lang='en')
               |   &lt;div class="pbc-card__buttons">
               |     &lt;button class="pbc-btn pbc-btn-secondary">Button&lt;/button>
               |     &lt;button class="pbc-btn pbc-btn-secondary">Button&lt;/button>
+              |     &lt;a class="pull-right collapsed pbc-btn pbc-btn-secondary"
+              |        data-toggle="collapse" href="#expand-content-id">
+              |       &lt;span class="icon icon-expand-more">&lt;/span>
+              |     &lt/a>
+              |   &lt;/div>
+              |   &lt;div id="expand-content-id" class="pbc-card__expand-content collapse">
+              |     &lt;p>
+              |       ...
+              |     &lt/p>
               |   &lt;/div>
               | &lt;/div>
       // end card 4
 
+
       h2 Card 5
       .row
         .col-sm-4
-          .pbc-card
-            .pbc-card__content
-              h2.h5.pbc-card__heading This is a header
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.
-            .pbc-card__buttons
-              button.pbc-btn.pbc-btn-secondary Button
-              button.pbc-btn.pbc-btn-secondary Button
-              a.pull-right.collapsed.pbc-btn.pbc-btn-secondary(data-toggle='collapse', href='#expand-example')
-                span.icon.icon-expand-more
-            #expand-example.pbc-card__expand-content.collapse
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt optio architecto quod consequuntur repellendus dolor officia alias. Magnam vel tempora ducimus ipsum eligendi praesentium temporibus soluta veniam beatae.
+          +card5('This is a heading', 'Left label', 'Right label')
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem nihil et odit, adipisci quos quae, voluptates. Debitis fuga mollitia quo, rerum ullam sunt doloremque dicta perspiciatis, dolorum, suscipit cumque blanditiis!
+
         .col-sm-8.language-html
           pre
             code
@@ -187,29 +176,20 @@ html(lang='en')
               |       ...
               |     &lt;/p>
               |   &lt;/div>
-              |     &lt;div class="pbc-card__buttons">
-              |       &lt;button class="pbc-btn pbc-btn-secondary">Button&lt;/button>
-              |       &lt;button class="pbc-btn pbc-btn-secondary">Button&lt;/button>
-              |       &lt;a data-toggle="collapse" href="#content-id" class="pull-right collapsed pbc-btn pbc-btn-secondary">
-              |         &lt;span class="icon icon-expand-more">&lt;/span>
-              |       &lt;/a>
-              |     &lt;/div>
-              |   &lt;/div>
-              |   &lt;div class="pbc-card__expand-content collapse" id="content-id">
-              |     &lt;p>
-              |       ...
-              |     &lt;/p>
+              |   &lt;div class="pbc-card__buttons">
+              |     &lt;button class="pbc-btn pbc-btn-secondary">Button&lt;/button>
+              |     &lt;button class="pbc-btn pbc-btn-secondary">Button&lt;/button>
               |   &lt;/div>
               | &lt;/div>
       // end card 5
 
+
       h2 Card 6
       .row
         .col-sm-4
-          .pbc-card.pbc-card--img-bg.text-light(data-aspect-ratio='16:9', style="background-image: url('img/hero-16x9.jpg')")
-            .pbc-card__content
-              h2.h5.pbc-card__heading This is a heading
-              p This card component will have a maximum character rule.
+          +card6(demoImg, 'This is a header')
+            p This card component will have a maximum character rule.
+              
         .col-sm-8.language-html
           pre
             code
@@ -223,15 +203,13 @@ html(lang='en')
               | &lt;/div>
       // end card 6
 
+
       h2 Card 7
       .row
         .col-sm-4
-          .pbc-card
-            .pbc-card__content
-              .pbc-card__icon.pbc-card__icon--margin-sm
-                span.icon-benefits
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti commodi molestias facere nihil optio minima enim, illum hic quasi, corporis doloremque obcaecati tenetur laudantium illo sit, explicabo error tempore accusantium!
+          +card7('icon-benefits')
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae necessitatibus eligendi dignissimos rem sed veniam doloribus consequatur cum minus ab voluptate, repellat velit unde impedit dolorum deleniti totam. Quam, placeat.
+
         .col-sm-8.language-html
           pre
             code
@@ -247,39 +225,22 @@ html(lang='en')
               | &lt;/div>
       // end card 7
       
-      hr
-        
+      h2 Equal height rows
+      p If you have multiple cards in a single row, you can add the class #[code .sm-eq-height] to the #[code .row] container to give them all equal height. Equal height rows should not be applied to cards with expandable content.
       .row.sm-eq-height
                   
         .col-sm-4
-          .pbc-card
-            img.img-responsive(src='img/hero-16x9.jpg', alt='')
-            .pbc-card__content
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem
-            .pbc-card__buttons
-              button.pbc-btn.pbc-btn-secondary Button
-              button.pbc-btn.pbc-btn-secondary Button
+          +card3(demoImg, 'This is a header', 'Left label', 'Right label')
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur facere cumque in consequuntur quia.
 
         .col-sm-4
-          .pbc-card
-            img.img-responsive(src='img/hero-16x9.jpg', alt='')
-            .pbc-card__content
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.
-            .pbc-card__buttons
-              button.pbc-btn.pbc-btn-secondary Button
-              button.pbc-btn.pbc-btn-secondary Button
+          +card3(demoImg, 'This is a header', 'Left label', 'Right label')
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur facere cumque in consequuntur quia magni impedit ipsam nam animi, modi, aperiam! Quos possimus, nobis minima aliquam ipsum rem vitae labore.
 
         .col-sm-4
-          .pbc-card
-            img.img-responsive(src='img/hero-16x9.jpg', alt='')
-            .pbc-card__content
-              p
-                | Lorem ipsum dolor si
-            .pbc-card__buttons
-              button.pbc-btn.pbc-btn-secondary Button
-              button.pbc-btn.pbc-btn-secondary Button
+          +card3(demoImg, 'This is a header', 'Left label', 'Right label')
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur facere cumque in consequuntur quia magni impedit ipsam nam animi.
+
 
 
     include ./includes/_scripts

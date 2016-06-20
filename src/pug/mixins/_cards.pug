@@ -1,0 +1,66 @@
+mixin card1(img)
+  .pbc-card
+    img.img-responsive(src= img)
+    .pbc-card__content
+      if block
+        block
+
+mixin card2(img, heading)
+  .pbc-card
+    img.img-responsive(src= img)
+    .pbc-card__content
+      h2.h5.pbc-card__heading= heading
+      if block
+        block
+
+mixin card3(img, heading, btnLeft, btnRight)
+  .pbc-card
+    img.img-responsive(src= img)
+    .pbc-card__content
+      h2.h5.pbc-card__heading= heading
+      if block
+        block
+    .pbc-card__buttons
+      button.pbc-btn.pbc-btn-secondary= btnLeft
+      button.pbc-btn.pbc-btn-secondary= btnRight
+
+mixin card4(img, heading, btnLeft, btnRight, url)
+  .pbc-card
+    img.img-responsive(src= img)
+    .pbc-card__content
+      h2.h5.pbc-card__heading= heading
+      if block
+        block
+    .pbc-card__buttons
+      button.pbc-btn.pbc-btn-secondary= btnLeft
+      button.pbc-btn.pbc-btn-secondary= btnRight
+      a.pull-right.collapsed.pbc-btn.pbc-btn-secondary(data-toggle='collapse', href= '#' + url)
+        span.icon.icon-expand-more
+    .pbc-card__expand-content.collapse(id= url)
+      if block
+        block
+
+mixin card5(heading, btnLeft, btnRight)
+  .pbc-card
+    .pbc-card__content
+      h2.h5.pbc-card__heading= heading
+      if block
+        block
+    .pbc-card__buttons
+      button.pbc-btn.pbc-btn-secondary= btnLeft
+      button.pbc-btn.pbc-btn-secondary= btnRight
+
+mixin card6(img, heading)
+  .pbc-card.pbc-card--img-bg.text-light(data-aspect-ratio='16:9', style="background-image: url('" + img + "')")
+    .pbc-card__content
+      h2.h5.pbc-card__heading= heading
+      if block
+        block
+
+mixin card7(iconName)
+  .pbc-card
+    .pbc-card__content
+      .pbc-card__icon.pbc-card__icon--margin-sm
+        span(class= iconName)
+      if block
+        block
