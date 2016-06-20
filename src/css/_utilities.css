@@ -69,14 +69,15 @@
  }
 
 
-
+/* 'eq-height' classes can be used with card components to give them the same
+ * height when there are multiple cards in a row.
+ * classes are prefixed with the breakpoint size to preserve normal BS grid
+ * behavior (stacking) when below that size.
+ */
 @media only screen and (min-width : 768px) {
   .sm-eq-height,
   .sm-eq-height > * {
     display: flex;
   }
 }
-.test {
-  min-height: 60px;
-  background-color: orange;
-}
+/* TODO: add additional breakpoint flex styles as needed */

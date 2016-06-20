@@ -33,21 +33,11 @@
   cursor: pointer;
 }
 .pbc-card--link:hover {
-  /* possibly raise */
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow:
     0 2px 2px 0 rgba(0,0,0,0.2),
     0 6px 10px 0 rgba(0,0,0,0.3);
 }
-/* alternative link panel styles*/
-.alt1:hover {
-  background-color: var(--gray-200);
-}
-.alt2:hover {
-  color: var(--primary-500);
-}
-
-
 
 .pbc-card--link a {
   color: inherit;
