@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var pug = require('gulp-pug');
 var postCSS = require('gulp-postcss');
+var plumber = require('gulp-plumber');
+var notify = require('gulp-notify');
 var del = require('del');
 var browserSync = require('browser-sync').create();
 
@@ -25,6 +27,7 @@ gulp.task('serve', function() {
 
 gulp.task('views', function () {
   return gulp.src('./src/pug/**/!(_)*.pug')
+    .pipe(handleError('Pug error'))
     .pipe(pug({ pretty: true }))
     .pipe(gulp.dest('./build/'));
 });
@@ -45,6 +48,7 @@ gulp.task('style', function() {
   ];
 
   return gulp.src('./src/css/style.css')
+    .pipe(handleError('Style error'))
     .pipe(postCSS(processors))
     .pipe(gulp.dest('./build/css/'))
     .pipe(browserSync.stream());
@@ -73,3 +77,12 @@ gulp.task('fonts', function () {
 gulp.task('default', [
   'views', 'style', 'scripts', 'images', 'fonts', 'serve'
 ]);
+
+function handleError(errTitle) {
+  return plumber({
+    errorHandler: notify.onError({
+      title: errTitle || 'Gulp error',
+      message: 'Error: <%= error.message %>'
+    })
+  });
+}
