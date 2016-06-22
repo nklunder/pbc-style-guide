@@ -42,6 +42,8 @@ gulp.task('pug-watch', ['views'], function () {
 gulp.task('style', function() {
   var processors = [
     require('postcss-partial-import')(),
+    require('postcss-nested'),
+    require('postcss-bem'),
     require('postcss-cssnext')(),
     require('rucksack-css')(),
     require('css-mqpacker')()
