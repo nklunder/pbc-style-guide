@@ -1,10 +1,64 @@
+/* Mobile & tablet/desktop navigation container */
+@media only screen and (min-width : 768px) {
+  .global-nav--mobile,
+  .slide-nav-trigger {
+    display: none;
+  }
+  .global-nav {
+    display: block;
+  }
+  /* Ensures that no transform is applied to the main page content when using
+   * tablet/desktop navigation style. For the rare case that a user is on
+   * desktop with a tiny viewport and using the mobile-style nav, then resizes
+   * the browser while still having the menu open.
+   */
+  #mobile-menu-toggle:checked ~ .page-wrap {
+    transform: none;
+  }
+}
+
+/* temporary testing code */
+.icon-menu {
+  font-size: 2rem;
+  padding-top: .4rem;
+  margin: 0;
+}
+
 .global-nav {
+  display: none;
+}
+.global-nav--mobile {
+  padding: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.slide-nav-trigger {
   position: fixed;
+  top: .8rem;
+  right: 1rem;
+  z-index: 400;
+  cursor: pointer;
+}
+#mobile-menu-toggle:checked ~ .page-wrap {
+  transform: translateX(calc(-100% + 3.5rem));
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.page-wrap {
+  overflow: hidden;
+  transition: transform .25s ease-out;
+}
+.global-nav,
+.global-nav--mobile {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
   top: 0;
   right: 0;
   left: 0;
   z-index: 100;
 }
+
+
+
 
 .global-nav li {
   display: inline-block;

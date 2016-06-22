@@ -2,13 +2,15 @@
   font-weight: 300;
 }
 
-input[type='checkbox'],
-input[type='radio'] {
+.pbc-toggle input[type='checkbox'],
+.pbc-toggle input[type='radio'] {
   position: absolute;
   opacity: 0;
 }
-input[type='checkbox'] + label::before,
-input[type='radio'] + label::before {
+
+/* shared styling between checkbox and radio toggles */
+.pbc-toggle input[type='checkbox'] + label::before,
+.pbc-toggle input[type='radio'] + label::before {
   display: inline-block;
   box-sizing: border-box;
   margin-right: .5em;
@@ -23,40 +25,42 @@ input[type='radio'] + label::before {
   line-height: .8;
   cursor: pointer;
 }
-input[type='checkbox']:disabled + label::before,
-input[type='radio']:disabled + label::before {
+.pbc-toggle input[type='checkbox']:disabled + label::before,
+.pbc-toggle input[type='radio']:disabled + label::before {
   border-color: var(--gray-300);
   content: '';
 }
 
-input[type='checkbox'] + label::before {
+/* checkbox styles */
+.pbc-toggle input[type='checkbox'] + label::before {
   border-radius: 2px;
   transition:
     color .28s ease,
     background-color .1s ease;
 }
-input[type='checkbox']:checked + label::before {
+.pbc-toggle input[type='checkbox']:checked + label::before {
   background-color: var(--accent-500);
   color: var(--accent-700);
   content: '\2713';
 }
-input[type='checkbox']:disabled:checked + label::before {
+.pbc-toggle input[type='checkbox']:disabled:checked + label::before {
   background-color: var(--gray-300);
   color: #fff;
   content: '\2713';
 }
 
-input[type='radio'] + label::before {
+/* radio button styles */
+.pbc-toggle input[type='radio'] + label::before {
   border-radius: 50%;
   line-height: .6;
   padding-left: .07em;
 }
-input[type='radio']:checked + label::before {
+.pbc-toggle input[type='radio']:checked + label::before {
   background-color: transparent;
   color: var(--accent-500);
   content: '\25CF';
 }
-input[type='radio']:disabled:checked + label::before {
+.pbc-toggle input[type='radio']:disabled:checked + label::before {
   background-color: transparent;
   color: var(--gray-200);
   content: '\25CF';
