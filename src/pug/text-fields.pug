@@ -6,6 +6,21 @@ html(lang='en')
   body
     include ./includes/_sidebarNav
     .main-content.container-fluid
-
+      h1 Text Fields
+      form
+        .form-group
+          select
+            option Value 1
+            option Value 2
+          label.control-label(for='select') Selectbox
+          i.bar
+        .form-group
+          input(type='text', required='required')
+          label.control-label(for='input') Textfield
+          i.bar
+        .form-group
+          textarea(required='required')
+          label.control-label(for='textarea') Textarea
+          i.bar
 
     include ./includes/_scripts

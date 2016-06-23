@@ -50,22 +50,18 @@ html(lang='en')
             | disabled checked
 
       h2 Switch
-      p
-        .pbc-toggle
-          input(type='radio' id='check1')
-          label(for='check1') unchecked
-      p
-        .pbc-toggle
-          input(type='radio' checked)
-          label(for='check2') checked
-      p
-        .pbc-toggle
-          input(type='radio' disabled)
-          label.pbc-radio__label disabled
-      p
-        .pbc-toggle
-          input(type='radio' disabled checked)
-          label.pbc-radio__label disabled
+      p.clearfix
+        input#unchecked.cbx.hidden(type='checkbox', checked='checked')
+        label.lbl(for='unchecked')
+          span checked
+      p.clearfix
+        input#checked.cbx.hidden(type='checkbox')
+        label.lbl(for='checked')
+          span unchecked
+      p.clearfix
+        input#unchecked_disabled.cbx.hidden(type='checkbox', disabled='')
+        label.lbl(for='unchecked_disabled')
+          span disabled
 
 
     include ./includes/_scripts

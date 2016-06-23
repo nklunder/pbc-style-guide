@@ -1,5 +1,5 @@
-.pbc-toggle label {
-  font-weight: 300;
+label {
+  font-weight: 300 !important;
 }
 
 .pbc-toggle input[type='checkbox'],
@@ -99,7 +99,7 @@
 }
 .radio :disabled ~ .helper::before,
 .radio :disabled ~ .helper::after {
-  border-color: var(--gray-200);
+  border-color: var(--gray-300);
 }
 
 .radio .helper::after {
@@ -121,4 +121,56 @@
 }
 .radio + .radio {
   margin-top: 1rem;
+}
+
+
+/* toggle styles */
+.lbl {
+  position: relative;
+  display: block;
+  height: .75rem;
+  width: 1.75rem;
+  background: var(--gray-500);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lbl:after {
+  position: absolute;
+  left: -2px;
+  top: -.125rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+  content: '';
+  transition: all 0.3s ease;
+}
+.lbl:active:after {
+  transform: scale(1.15, 0.85);
+}
+.cbx:checked ~ label {
+  background: var(--accent-200);
+}
+.cbx:checked ~ label:after {
+  left: .75rem;
+  background: var(--accent-500);
+}
+.cbx:disabled ~ label {
+  background: var(--gray-500);
+  pointer-events: none;
+}
+.cbx:disabled ~ label:after {
+  background: var(--gray-300);
+}
+
+.lbl span {
+  position: absolute;
+  top: -.4rem;
+  left: 2.5rem;
+}
+p.clearfix {
+  margin-bottom: 1rem;
 }
