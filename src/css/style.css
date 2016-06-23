@@ -2,11 +2,11 @@
 @import 'fonts';
 @import 'typography';
 @import 'utilities';
-/* related only to style guide layout*/
-@import 'style-guide-specific';
 
 @import 'components/manifest';
 
+/* related only to style guide layout*/
+@import 'style-guide-specific';
 /* vendor CSS */
 @import 'prism';
 

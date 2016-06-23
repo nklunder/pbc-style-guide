@@ -9,8 +9,7 @@
 }
 
 /* shared styling between checkbox and radio toggles */
-.pbc-toggle input[type='checkbox'] + label::before,
-.pbc-toggle input[type='radio'] + label::before {
+.pbc-toggle input[type='checkbox'] + label::before {
   display: inline-block;
   box-sizing: border-box;
   margin-right: .5em;
@@ -25,8 +24,7 @@
   line-height: .8;
   cursor: pointer;
 }
-.pbc-toggle input[type='checkbox']:disabled + label::before,
-.pbc-toggle input[type='radio']:disabled + label::before {
+.pbc-toggle input[type='checkbox']:disabled + label::before {
   border-color: var(--gray-300);
   content: '';
 }
@@ -50,7 +48,7 @@
 }
 
 /* radio button styles */
-.pbc-toggle input[type='radio'] + label::before {
+/*.pbc-toggle input[type='radio'] + label::before {
   border-radius: 50%;
   line-height: .6;
   padding-left: .07em;
@@ -64,9 +62,63 @@
   background-color: transparent;
   color: var(--gray-200);
   content: '\25CF';
-}
+}*/
 
 
 .pbc-switch {
   padding-left: 1.75rem;
+}
+
+/* radio styles from https://codepen.io/jonnitto/pen/OVmvPB */
+
+.radio .helper {
+  position: absolute;
+  top: 0;
+  left: -0.25rem;
+  display: block;
+  color: var(--accent-500);
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+.radio label {
+  margin-left: .5rem;
+}
+.radio .helper::before,
+.radio .helper::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border: 0.125rem solid var(--accent-500);
+  border-radius: 50%;
+  content: '';
+  transition: transform 0.28s ease;
+}
+.radio :disabled ~ .helper::before,
+.radio :disabled ~ .helper::after {
+  border-color: var(--gray-200);
+}
+
+.radio .helper::after {
+  background-color: var(--accent-500);
+  color: var(--accent-500);
+  transform: scale(0);
+}
+.radio :checked:disabled ~ .helper::after {
+  background-color: var(--gray-200);
+}
+.radio label:hover .helper {
+  color: var(--accent-500);
+}
+.radio input:checked~ .helper::after {
+  transform: scale(0.5);
+}
+.radio input:checked~ .helper::before {
+  color: var(--accent-500);
+}
+.radio + .radio {
+  margin-top: 1rem;
 }
