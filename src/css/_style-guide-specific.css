@@ -1,12 +1,12 @@
 .color-group {
-  color: var(--text-light-primary);
-  font-weight: 500;
-  line-height: 1;
-  border-radius: 2px;
   overflow: hidden;
-  list-style-type: none;
   margin: 0 0 1rem;
   padding: 0;
+  border-radius: 2px;
+  color: var(--text-light-primary);
+  list-style-type: none;
+  font-weight: 500;
+  line-height: 1;
 }
 .color-group li {
   padding: 1em;
@@ -37,20 +37,25 @@
 /* push body down a so it's not obscured by the nav toggle*/
 body { margin-top: 2.3rem; }
 .nav-toggle-label {
-  display: block;
-  z-index: 100;
   position: fixed;
+  z-index: 50;
   top: 0;
   left: 0;
+  display: block;
+  padding: .15rem .5rem;
+  background-color: #E0E0E0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   line-height: 1;
   cursor: pointer;
-  padding: .15rem .3rem;
-  background-color: #E0E0E0;
+}
+.nav-toggle-label .icon-menu {
+  font-size: 2rem;
+  color: var(--text-dark-primary);
+  margin-right: .25rem;
 }
 #nav-toggle:checked ~ .fixed-sidebar {
-  display: inline-block;
+  display: block;
   background-color: #E0E0E0;
-  min-width: 25%;
 }
 
 .fixed-sidebar { display: none; }
@@ -63,7 +68,6 @@ body { margin-top: 2.3rem; }
   .nav-toggle-label { display: none; }
   .fixed-sidebar {
     position: fixed;
-    width: 14rem;
     top: 0;
     bottom: 0;
     left: 0;
@@ -71,8 +75,9 @@ body { margin-top: 2.3rem; }
     display: block;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #E0E0E0;
+    width: 14rem;
     border-right: 1px solid #eee;
+    background-color: #E0E0E0;
   }
   .main-content {
     margin-left: 14rem;
@@ -80,13 +85,13 @@ body { margin-top: 2.3rem; }
 }
 
 .fixed-sidebar__nav {
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
 .fixed-sidebar__nav li a {
+  display: inline-block;
   padding: .4em 1em;
   width: 100%;
-  display: inline-block;
 }
 .fixed-sidebar__nav a:hover:not(.selected) {
   background-color: #F5F5F5;
@@ -104,7 +109,7 @@ body { margin-top: 2.3rem; }
 }
 
 [class^='icon-'] {
-  font-size: 48px;
-  vertical-align: middle;
   color: rgb(0, 153, 217);
+  vertical-align: middle;
+  font-size: 48px;
 }

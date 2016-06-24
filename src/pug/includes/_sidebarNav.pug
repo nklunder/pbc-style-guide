@@ -1,8 +1,8 @@
 -
   // add new pages as 'Page Title': 'url' key:value pairs
-  var pages = {
+  var componentPages = {
     'Home': 'index',
-    'Accordions': 'accordions',
+    'Accordions': 'accordion',
     'Alerts': 'alerts',
     'Buttons': 'buttons',
     'Cards': 'cards',
@@ -15,11 +15,14 @@
     'Typography': 'typography'
   };
 
-input#nav-toggle.sr-only(type='checkbox')
-label.nav-toggle-label.icon-menu(for='nav-toggle')
+input#nav-toggle.sr-only(type='checkbox', autocomplete='off')
+label(for='nav-toggle').nav-toggle-label
+  span.icon-menu
+  span menu
+
 .fixed-sidebar
   ul.fixed-sidebar__nav
-    each url, page in pages
+    each url, page in componentPages
       li
         if page === currentPage
           a.selected(href=url + '.html')= page
