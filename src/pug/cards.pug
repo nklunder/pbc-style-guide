@@ -11,22 +11,9 @@ html(lang='en')
       h1 Cards
       .row
         .col-sm-4
-          .pbc-card
-            img.img-responsive(src= demoImg)
-            .pbc-card__content
-              .pbc-card__icon
-                span.icon-health-apple
-              h2.h5.pbc-card__heading This is a header
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum accusamus dolores tenetur ullam autem aperiam iusto est molestias repellendus, voluptas nulla nemo blanditiis quisquam soluta expedita consequuntur, velit nobis.
-            .pbc-card__buttons
-              button.pbc-btn.pbc-btn-secondary Button
-              button.pbc-btn.pbc-btn-secondary Button
-              a.pull-right.collapsed.pbc-btn.pbc-btn-secondary(data-toggle='collapse', href='#expandContent2')
-                span.icon.icon-expand-more
-            #expandContent2.pbc-card__expand-content.collapse
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt optio architecto quod consequuntur repellendus dolor officia alias. Magnam vel tempora ducimus ipsum eligendi praesentium temporibus soluta veniam beatae.
+          +cardMaster(demoImg, 'This is a heading', 'icon-phone', 'Left label', 'Right label', 'masterDemo')
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ea eaque fuga ipsum dolores repellendus nisi, voluptatibus officia ratione beatae numquam porro deserunt soluta quae rem exercitationem, dolore iste, itaque.
+          
         .col-sm-8
           h2 Usage
           p

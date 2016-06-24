@@ -72,7 +72,7 @@ fieldset {
   z-index: 2;
   width: 0;
   height: 0.125rem;
-  background: var(--accent-500);
+  background: var(--link-color);
   content: '';
   transition: left 0.28s ease, width 0.28s ease;
 }
@@ -129,7 +129,7 @@ fieldset {
 .form-group select:focus~ .control-label,
 .form-group input:focus~ .control-label,
 .form-group textarea:focus~ .control-label {
-  color: var(--accent-500);
+  color: var(--link-color);
 }
 .form-group select:focus~ .bar::before,
 .form-group input:focus~ .bar::before,

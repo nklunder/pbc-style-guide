@@ -64,3 +64,21 @@ mixin card7(iconName)
         span(class= iconName)
       if block
         block
+
+mixin cardMaster(img, heading, iconName, btnLeft, btnRight, url)
+  .pbc-card
+    img.img-responsive(src= img)
+    .pbc-card__content
+      .pbc-card__icon
+        span.icon-health-apple
+      h2.h5.pbc-card__heading= heading
+      if block
+        block
+    .pbc-card__buttons
+      button.pbc-btn.pbc-btn-secondary= btnLeft
+      button.pbc-btn.pbc-btn-secondary= btnRight
+      a.pull-right.collapsed.pbc-btn.pbc-btn-secondary(data-toggle='collapse', href='#' + url)
+        span.icon.icon-expand-more
+    .pbc-card__expand-content.collapse(id= url)
+      if block
+        block

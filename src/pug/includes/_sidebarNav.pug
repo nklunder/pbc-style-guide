@@ -1,6 +1,8 @@
 -
+  // add new pages as 'Page Title': 'url' key:value pairs
   var pages = {
     'Home': 'index',
+    'Accordions': 'accordions',
     'Alerts': 'alerts',
     'Buttons': 'buttons',
     'Cards': 'cards',
@@ -13,6 +15,8 @@
     'Typography': 'typography'
   };
 
+input#nav-toggle.sr-only(type='checkbox')
+label.nav-toggle-label.icon-menu(for='nav-toggle')
 .fixed-sidebar
   ul.fixed-sidebar__nav
     each url, page in pages

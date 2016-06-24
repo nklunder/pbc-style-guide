@@ -20,8 +20,11 @@ body {
   line-height: 1.5;
   font-weight: 300;
   background-color: #fafafa;
-
-  /* Rucksack properties */
+}
+body, .body-text {
+  /* body type sizes isolated so they can also be assigned the '.body-text'
+   * class. as with header styles, the Rucksack PostCSS plugin is used.
+   */
   font-size: responsive;
   min-font-size: 0.875rem;
   max-font-size: 1.125rem;
@@ -35,11 +38,11 @@ small, .small {
 }
 
 a {
-  color: #0066CC;
+  color: var(--link-color);
   font-weight: 400;
 }
 a:hover,
-a:active { color: #00478e; }
+a:active { color: var(--link-color-active); }
 
 h1, .h1 {
   font-weight: 500;
