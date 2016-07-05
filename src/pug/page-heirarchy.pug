@@ -1,0 +1,27 @@
+- var currentPage = 'General Page Heirarchy'
+doctype html
+html(lang='en')
+  include ./includes/_head
+  body
+    include ./includes/_sidebarNav
+    .main-content.container-fluid
+      h1 General page heirarchy
+
+      p This wireframe is a guide to where the major navigation and content elements of our website should appear on a page. To maintain a consistent modular structure to the various page forms on our site, follow this guide for fundamental layout, content hierarchy, and navigation structure.
+      p.h4 Desktop
+      img.img-responsive(src='img/Heirarchy-graphic.png')
+      p.h4 Tablet
+      p TODO
+      p.h4 Mobile
+      p TODO
+
+      h2 Design rationale
+      p #[a(href='https://www.nngroup.com/topic/eyetracking/') Eye-tracking studies] by Jakob Nielsen show that web pages dominated by text information are scanned in an “F” pattern of intense eye fixations across the top header area, and down the left edge of the text
+      p
+        img.img-responsive(src='img/heirarchy-f-pattern.png')
+      p #[a(href='http://www.surl.org/usabilitynews/81/webobjects.asp') Human interface researchers] have done studies on #[a(href='http://psychology.wichita.edu/surl/usabilitynews/62/web_object_international.htm') where users expect to find standard web page components] and have found clear sets of expectations about where some items are located on web pages.
+      p
+        img.img-responsive(src='img/heirarchy-canonical-form.png')
+
+
+    include ./includes/_scripts
