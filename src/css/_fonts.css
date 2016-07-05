@@ -25,6 +25,27 @@
 }
 
 
+.icon-print:before {
+    content: "\e921";
+}
+.icon-notification:before {
+    content: "\e922";
+}
+.icon-log-out:before {
+    content: "\e923";
+}
+.icon-settings:before {
+    content: "\e924";
+}
+.icon-visibility:before {
+    content: "\e925";
+}
+.icon-visibility-off:before {
+    content: "\e926";
+}
+.icon-home:before {
+    content: "\e927";
+}
 .icon-benefits:before {
     content: "\e900";
 }
@@ -91,10 +112,10 @@
 .icon-more:before {
     content: "\e915";
 }
-.icon-naviagate-before:before {
+.icon-navigate-before:before {
     content: "\e916";
 }
-.icon-naviagate-next:before {
+.icon-navigate-next:before {
     content: "\e917";
 }
 .icon-nurseline:before {

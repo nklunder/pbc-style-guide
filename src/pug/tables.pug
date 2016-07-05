@@ -1,0 +1,45 @@
+- var currentPage = 'Tables'
+doctype html
+html(lang='en')
+  include ./includes/_head
+  body
+    include ./includes/_sidebarNav
+    .main-content.container-fluid
+      h1 Tables
+
+      table
+        caption Table title
+        thead
+          tr
+            th test
+            th test
+            th heading 3
+            th a
+            th b
+        tbody
+          tr
+            td blah blah
+            td blah blah
+            td blah blah
+            td
+              span.icon-edit
+            td
+              span.icon-delete
+          tr.test
+            td.current mixed width content
+            td blah blah
+            td blah
+            td
+              span.icon-edit
+            td
+              span.icon-delete
+          tr
+            td blah blah
+            td blah blah
+            td blah blah
+            td
+              span.icon-edit
+            td
+              span.icon-delete
+
+    include ./includes/_scripts

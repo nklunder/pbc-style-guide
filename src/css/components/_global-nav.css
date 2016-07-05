@@ -1,78 +1,52 @@
-/* Mobile & tablet/desktop navigation container */
-@media only screen and (min-width : 768px) {
-  .global-nav--mobile,
-  .slide-nav-trigger {
-    display: none;
-  }
-  .global-nav {
-    display: block;
-  }
-  /* Ensures that no transform is applied to the main page content when using
-   * tablet/desktop navigation style. For the rare case that a user is on
-   * desktop with a tiny viewport and using the mobile-style nav, then resizes
-   * the browser while still having the menu open.
-   */
-  #mobile-menu-toggle:checked ~ .page-wrap {
-    transform: none;
-  }
-}
-
-/* temporary testing code */
-.icon-menu {
-  font-size: 2rem;
-  padding-top: .4rem;
-  margin: 0;
-}
-
 .global-nav {
-  display: none;
-}
-.global-nav--mobile {
-  padding: 1em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.slide-nav-trigger {
   position: fixed;
-  top: .8rem;
-  right: 1rem;
-  z-index: 400;
-  cursor: pointer;
-}
-#mobile-menu-toggle:checked ~ .page-wrap {
-  transform: translateX(calc(-100% + 3.5rem));
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-.page-wrap {
-  overflow: hidden;
-  transition: transform .25s ease-out;
-}
-.global-nav,
-.global-nav--mobile {
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
   top: 0;
   right: 0;
   left: 0;
   z-index: 100;
 }
 
+.global-nav__utility-bar {
+  position: relative;
+  display: flex;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: .2rem !important;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.94);
+}
 
-
+.global-nav__logo {
+  height: 3em;
+  margin-bottom: .4em;
+}
+.global-nav__utility-bar-links [class^='icon'] {
+  font-size: 1.8rem;
+  margin-right: .1em;
+}
+.global-nav__utility-bar-links,
+.global-nav__section-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
 
 .global-nav li {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+
 }
 .global-nav a {
-  display: inline-block;
   color: var(--text-dark-secondary);
+  padding: 0 .6em .5em;
+  border-bottom: .4em solid transparent;
   transition:
     border-bottom .15s ease-in,
     color .1s ease;
-}
-.global-nav a {
-  padding: 0 1em .2em;
-  border-bottom: .4em solid transparent;
 }
 .global-nav a:hover {
   border-bottom: .4em solid var(--primary-500);
@@ -81,14 +55,9 @@
   cursor: pointer;
 }
 
-.global-nav__logo {
-  height: 3em;
-}
 
-.global-nav__utility-bar {
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.95);
-}
+
+
 .global-nav__utility-bar::after {
   position: absolute;
   right: 0;
@@ -99,16 +68,11 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.12), transparent);
   content: '';
 }
-.global-nav__utility-bar-links {
-
-}
 
 .global-nav__main {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   background-color: rgba(255, 255, 255, 0.9);
-}
-.global-nav__main [class*='container-fixed'] {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 }
 
 .global-nav__section-links {
@@ -117,4 +81,45 @@
 }
 .global-nav__section-links .selected a {
   border-bottom: .4em solid var(--primary-500);
+}
+
+
+/*.global-nav--mobile {
+  padding: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}*/
+/*
+.slide-nav-trigger {
+  position: fixed;
+  top: .8rem;
+  right: 1rem;
+  z-index: 400;
+  cursor: pointer;
+}*/
+/*#mobile-menu-toggle:checked ~ .page-wrap {
+  transform: translateX(calc(-100% + 3.5rem));
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}*/
+/*.page-wrap {
+  overflow: hidden;
+  transition: transform .25s ease-out;
+}*/
+
+/* Mobile & tablet/desktop navigation container */
+@media only screen and (min-width : 768px) {
+  /*.global-nav--mobile,
+  .slide-nav-trigger {
+    display: none;
+  }
+  .global-nav {
+    display: block;
+  }*/
+  /* Ensures that no transform is applied to the main page content when using
+   * tablet/desktop navigation style. For the rare case that a user is on
+   * desktop with a tiny viewport and using the mobile-style nav, then resizes
+   * the browser while still having the menu open.
+   */
+  /*#mobile-menu-toggle:checked ~ .page-wrap {
+    transform: none;
+  }*/
 }
