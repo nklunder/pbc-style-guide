@@ -76,8 +76,7 @@ body { margin-top: 2.3rem; }
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     width: 14rem;
-    border-right: 1px solid #eee;
-    background-color: #E0E0E0;
+    background-color: #fff;
   }
   .main-content {
     margin-left: 14rem;
@@ -94,10 +93,10 @@ body { margin-top: 2.3rem; }
   width: 100%;
 }
 .fixed-sidebar__nav a:hover:not(.selected) {
-  background-color: #F5F5F5;
+  background-color: var(--gray-100);
 }
 .fixed-sidebar a.selected {
-  background-color: #757575;
+  background-color: var(--gray-500);
   color: var(--text-light-primary) !important;
 }
 .fixed-sidebar a:hover {
