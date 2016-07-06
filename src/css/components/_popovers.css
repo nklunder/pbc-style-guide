@@ -1,0 +1,7 @@
+.pbc-popover,
+.pbc-popover:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid lime;
+}

@@ -58,7 +58,7 @@
 
  @media only screen and (min-width : 992px) {
    .container-fixed-992 {
-     padding: 1rem calc(50% - 464px);
+     padding-left: 1rem calc(50% - 464px);
    }
  }
 
@@ -81,3 +81,13 @@
   }
 }
 /* TODO: add additional breakpoint flex styles as needed */
+
+
+/* Junk drawer
+   ========================================================================== */
+/* HACK: Fixes IE showing svg images at arbitrary sizes */
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   img[src*=".svg"] {
+     width: 100%;
+   }
+ }

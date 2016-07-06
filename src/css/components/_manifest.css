@@ -3,6 +3,7 @@
 @import 'cards';
 @import 'global-nav';
 @import 'hero';
+@import 'popovers';
 @import 'tables';
 @import 'toggles';
 @import 'textFields';
