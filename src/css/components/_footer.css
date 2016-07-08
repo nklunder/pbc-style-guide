@@ -1,5 +1,31 @@
 .pbc-footer {
   color: #fff;
+
+  &__state-select {
+    display: flex;
+    align-items: flex-start;
+    & img {
+      height: 4rem;
+      margin-right: 1rem;
+    }
+    & label {
+      top: unset !important;
+      bottom: -.5rem;
+      left: 5rem !important;
+      color: white !important;
+    }
+    & select {
+      color: #fff !important;
+      font-size: 2rem !important;
+      font-weight: 400;
+      border-bottom: 1px solid #fff !important;
+    }
+
+    & option {
+      color: var(--text-dark-primary);
+    }
+  }
+
   &__navigation {
     background-color: var(--primary-700);
     padding-top: 3.125rem;
@@ -9,6 +35,7 @@
   &__social-links {
     background-color: var(--primary-500);
   }
+
   &__languages {
     background-color: var(--primary-900);
   }
