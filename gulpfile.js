@@ -33,9 +33,9 @@ gulp.task('views', function () {
 });
 // Makes sure 'views' task completes before browser reload. 'reload' callback
 // has to be wrapped in function in order for it to work correctly
-//(https://stackoverflow.com/questions/29801070/gulp-browser-sync-only-works-once/30438407#30438407)
+// https://stackoverflow.com/questions/29801070/gulp-browser-sync-only-works-once/30438407#30438407
 gulp.task('pug-watch', ['views'], function () {
-  browserSync.reload()
+  browserSync.reload();
 });
 
 
@@ -43,8 +43,8 @@ gulp.task('style', function() {
   var processors = [
     require('postcss-partial-import')(),
     require('postcss-cssnext')(),
-    require('rucksack-css')(),
-    require('css-mqpacker')()
+    require('postcss-nesting')(),
+    require('rucksack-css')()
   ];
 
   return gulp.src('./src/css/style.css')

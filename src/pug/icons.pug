@@ -129,14 +129,14 @@ html(lang='en')
         input#icon-search.form-control(type='text')
 
       h3 System
-      .row
+      .row.icon-library
         each keywords, icon in icons.system
           .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords=keywords)
             span(class=icon)
             p #{icon}
 
       h3 Custom
-      .row
+      .row.icon-library
         each keywords, icon in icons.custom
           .js-icon-filter.text-center.col-xs-4.col-sm-3(data-keywords=keywords)
             span(class=icon)

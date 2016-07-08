@@ -33,7 +33,6 @@ body, .body-text {
 }
 
 small, .small {
-  color: var(--text-dark-secondary);
   font-size: .8em;
 }
 

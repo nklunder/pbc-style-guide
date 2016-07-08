@@ -52,9 +52,10 @@
   */
 
  /* default padding when smaller than fixed size, & fallback for old browsers*/
- [class^='container-fixed'] {
+.container-fixed-992,
+.container-fixed-1200 {
    padding: 1rem;
- }
+}
 
  @media only screen and (min-width : 992px) {
    .container-fixed-992 {

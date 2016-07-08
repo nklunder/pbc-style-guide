@@ -11,7 +11,7 @@
   display: flex;
   padding-top: 1rem;
   padding-left: 1rem;
-  padding-bottom: .2rem !important;
+  padding-bottom: .2rem;
   align-items: flex-end;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.94);
@@ -81,7 +81,7 @@
 .global-nav__main {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   background-color: rgba(255, 255, 255, 0.9);
-  padding-bottom: 0 !important;
+  padding-bottom: 0;
 }
 
 .global-nav__section-links {

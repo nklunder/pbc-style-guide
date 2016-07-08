@@ -1,0 +1,15 @@
+.pbc-footer {
+  color: #fff;
+  &__navigation {
+    background-color: var(--primary-700);
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+  }
+
+  &__social-links {
+    background-color: var(--primary-500);
+  }
+  &__languages {
+    background-color: var(--primary-900);
+  }
+}

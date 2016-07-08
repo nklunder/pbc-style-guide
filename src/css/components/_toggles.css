@@ -1,5 +1,5 @@
 label {
-  font-weight: 300 !important;
+  font-weight: 300 !important; /* important to override BS styles */
 }
 
 .pbc-toggle input[type='checkbox'],

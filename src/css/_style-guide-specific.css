@@ -107,7 +107,7 @@ body { margin-top: 2.3rem; }
   outline: 0;
 }
 
-[class^='icon-'] {
+.icon-library [class^='icon-'] {
   color: rgb(0, 153, 217);
   vertical-align: middle;
   font-size: 48px;

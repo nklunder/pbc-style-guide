@@ -3,5 +3,8 @@
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-  border-bottom: 1px solid lime;
+  text-shadow: .05em 0 white, -.05em 0 white;
+  background: linear-gradient(90deg, gray 40%, transparent 0) repeat-x;
+  background-size: .4em 2px;
+  background-position: 0 1.05em;
 }
