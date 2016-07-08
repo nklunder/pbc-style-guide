@@ -12,12 +12,8 @@
   padding: 1em;
   font-size: inherit;
 }
-.color-group .main-color {
-  border-bottom: 4px solid #fff;
-}
-.color-group .hex {
-  float: right;
-}
+.color-group .main-color { border-bottom: 4px solid #fff; }
+.color-group .hex { float: right; }
 
 .primary-100 { background-color: var(--primary-100); }
 .primary-300 { background-color: var(--primary-300); }
@@ -34,6 +30,7 @@
 .gray-500 { background-color: var(--gray-500); }
 .gray-600 { background-color: var(--gray-600); }
 .gray-900 { background-color: var(--gray-900); }
+
 /* push body down a so it's not obscured by the nav toggle*/
 body { margin-top: 2.3rem; }
 .nav-toggle-label {
