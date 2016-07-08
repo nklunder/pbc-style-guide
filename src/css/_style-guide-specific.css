@@ -50,6 +50,7 @@ body { margin-top: 2.3rem; }
 }
 .nav-toggle-label .icon-menu {
   font-size: 2rem;
+  vertical-align: middle;
   color: var(--text-dark-primary);
   margin-right: .25rem;
 }

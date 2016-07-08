@@ -1,14 +1,9 @@
-@import 'variables';
-@import 'fonts';
-@import 'typography';
-@import 'utilities';
-
+@import 'base/manifest';
 @import 'components/manifest';
 
 /* related only to style guide layout*/
 @import 'style-guide-specific';
-/* vendor CSS */
-@import 'prism';
+
 
 
 
