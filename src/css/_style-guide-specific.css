@@ -110,3 +110,10 @@ body { margin-top: 2.3rem; }
   vertical-align: middle;
   font-size: 48px;
 }
+
+/* ==========================================================================
+   Snackbars page styles
+   ========================================================================== */
+.global-nav.global-nav--alert-example {
+  position: static;
+}

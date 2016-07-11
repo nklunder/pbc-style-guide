@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 220 425" style="enable-background:new 0 0 220 425;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F4F4F4;}
+	.st1{fill:#212121;}
+	.st2{font-family:'Roboto-Regular';}
+	.st3{font-size:10px;}
+	.st4{fill:#B3292D;}
+	.st5{font-size:7px;}
+	.st6{font-family:'Roboto-Light';}
+	.st7{fill:none;stroke:#B3292D;stroke-miterlimit:10;}
+	.st8{opacity:0.44;fill:#80C454;}
+	.st9{fill:#ED2224;}
+	.st10{fill:#ED2025;}
+	.st11{fill:none;stroke:#898989;stroke-miterlimit:10;}
+</style>
+<rect x="9.7" y="33.1" class="st0" width="199.7" height="335.6"/>
+<g>
+	<text transform="matrix(1 0 0 1 28.1903 110.5802)" class="st1 st2 st3">Input text</text>
+</g>
+<text transform="matrix(1 0 0 1 28.1432 98.3848)" class="st4 st2 st5">Label text</text>
+<g>
+	<text transform="matrix(1 0 0 1 28.1903 124.4669)" class="st4 st6 st5">Error text</text>
+</g>
+<line class="st7" x1="28.2" y1="117.1" x2="192.2" y2="117.1"/>
+<rect x="25.4" y="98.4" class="st8" width="169" height="4"/>
+<rect x="25.4" y="112.8" class="st8" width="169" height="4"/>
+<rect x="25.4" y="69.4" class="st8" width="169" height="24"/>
+<text transform="matrix(1 0 0 1 186.5 82.5708)" class="st9 st2 st5">3 em</text>
+<text transform="matrix(1 0 0 1 177.625 102.385)" class="st9 st2 st5">0.50 em</text>
+<text transform="matrix(1 0 0 1 177.6249 123.9181)" class="st9 st2 st5">0.25 em</text>
+<text transform="matrix(1 0 0 1 177.6249 117.3209)" class="st9 st2 st5">0.50 em</text>
+<g>
+	<text transform="matrix(1 0 0 1 28.1903 181.3516)"><tspan x="0" y="0" class="st1 st2 st3">Input text </tspan><tspan x="42.9" y="0" class="st10 st2 st3">(body text)</tspan></text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 28.1903 240.6016)" class="st9 st2 st5">Line 1pt #b3272d</text>
+</g>
+<text transform="matrix(1 0 0 1 28.1432 169.1563)"><tspan x="0" y="0" class="st4 st2 st5">Label text </tspan><tspan x="30.2" y="0" class="st10 st2 st5">(Roboto SM Regular text #b3272d)</tspan></text>
+<g>
+	<text transform="matrix(1 0 0 1 28.1903 195.2383)"><tspan x="0" y="0" class="st4 st6 st5">Error text </tspan><tspan x="28.5" y="0" class="st10 st6 st5">(Roboto SM Light text #b3272d)</tspan></text>
+</g>
+<line class="st7" x1="28.2" y1="187.8" x2="192.2" y2="187.8"/>
+<line class="st7" x1="28.2" y1="248" x2="192.2" y2="248"/>
+<g>
+	<text transform="matrix(1 0 0 1 28.1903 320.4807)" class="st1 st2 st3">Input text</text>
+</g>
+<text transform="matrix(1 0 0 1 28.1432 308.2854)" class="st4 st2 st5">Label text</text>
+<g>
+	<text transform="matrix(1 0 0 1 28.1903 334.3675)" class="st4 st6 st5">Error text</text>
+</g>
+<line class="st7" x1="28.2" y1="327" x2="192.2" y2="327"/>
+<path class="st11" d="M200.5,424.5h-181c-10.4,0-19-8.6-19-19v-386c0-10.4,8.6-19,19-19h181c10.4,0,19,8.6,19,19v386
+	C219.5,416,210.9,424.5,200.5,424.5z"/>
+<circle class="st11" cx="110" cy="396.5" r="17.4"/>
+</svg>

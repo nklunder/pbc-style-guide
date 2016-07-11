@@ -1,0 +1,12 @@
+.global-nav__alert-stripe {
+  position: relative;
+  background-color: var(--primary-900);
+  color: #fff;
+  font-weight: 400;
+}
+
+.global-nav__alert-stripe-content> * {
+  /* pull margin from content to prevent odd container sizing */
+  margin: 0;
+  padding: .5em 1em;
+}

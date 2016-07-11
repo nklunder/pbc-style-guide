@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 220 425" style="enable-background:new 0 0 220 425;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F4F4F4;}
+	.st1{fill:none;stroke:#898989;stroke-miterlimit:10;}
+	.st2{fill:#B3292D;}
+	.st3{fill:#212121;}
+	.st4{font-family:'Roboto-Regular';}
+	.st5{font-size:10px;}
+	.st6{font-size:7px;}
+	.st7{font-family:'Roboto-Light';}
+	.st8{fill:none;stroke:#B3292D;stroke-miterlimit:10;}
+	.st9{fill:#767677;}
+	.st10{fill:#9E9E9E;}
+	.st11{fill:none;stroke:#9E9E9E;stroke-width:0.5;stroke-miterlimit:10;}
+	.st12{fill:#FFFFFF;}
+</style>
+<rect x="9.7" y="33.1" class="st0" width="199.7" height="335.6"/>
+<path class="st1" d="M200.5,424.5h-181c-10.4,0-19-8.6-19-19v-386c0-10.4,8.6-19,19-19h181c10.4,0,19,8.6,19,19v386
+	C219.5,416,210.9,424.5,200.5,424.5z"/>
+<circle class="st1" cx="110" cy="396.5" r="17.4"/>
+<rect x="9.7" y="33.1" class="st2" width="199.7" height="57.9"/>
+<g>
+	<text transform="matrix(1 0 0 1 28.0352 123.621)" class="st3 st4 st5">Input text</text>
+</g>
+<text transform="matrix(1 0 0 1 27.9881 111.4257)" class="st2 st4 st6">Label text</text>
+<g>
+	<text transform="matrix(1 0 0 1 28.0352 137.5078)" class="st2 st7 st6">Error text</text>
+</g>
+<line class="st8" x1="28" y1="130.1" x2="192" y2="130.1"/>
+<g>
+	<text transform="matrix(1 0 0 1 28.0352 181.3516)" class="st3 st4 st5">Input text</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 27.9881 169.1563)" class="st9 st4 st6">Label text</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 28.0352 195.2383)" class="st10 st7 st6">Helper text</text>
+</g>
+<line class="st11" x1="28" y1="187.8" x2="192" y2="187.8"/>
+<g>
+	<text transform="matrix(1 0 0 1 28.0352 244.0182)" class="st3 st4 st5">Input text</text>
+</g>
+<text transform="matrix(1 0 0 1 27.9881 231.8229)" class="st2 st4 st6">Label text</text>
+<g>
+	<text transform="matrix(1 0 0 1 28.0352 257.905)" class="st2 st7 st6">Error text</text>
+</g>
+<line class="st8" x1="28" y1="250.5" x2="192" y2="250.5"/>
+<g>
+	<text transform="matrix(1 0 0 1 21.7411 51.8888)"><tspan x="0" y="0" class="st12 st4 st5">Page top failure error displays here.</tspan><tspan x="0" y="14" class="st12 st4 st5">This is always pin to the top screen and</tspan><tspan x="0" y="28" class="st12 st4 st5">filed errors displayed on the view finder. </tspan></text>
+</g>
+</svg>

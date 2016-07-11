@@ -1,3 +1,8 @@
+/**
+ * NOTE: styles for .alert-stripe are located in
+ * src/css/components/_snackbars.css
+ */
+
 .global-nav {
   position: fixed;
   top: 0;

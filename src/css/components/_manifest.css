@@ -5,6 +5,7 @@
 @import 'global-nav';
 @import 'hero';
 @import 'popovers';
+@import 'snackbars';
 @import 'tables';
 @import 'toggles';
 @import 'textFields';
