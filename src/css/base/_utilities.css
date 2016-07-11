@@ -59,7 +59,7 @@
 
  @media only screen and (min-width : 992px) {
    .container-fixed-992 {
-     padding-left: 1rem calc(50% - 464px);
+     padding: 1rem calc(50% - 464px);
    }
  }
 

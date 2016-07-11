@@ -4,9 +4,32 @@ html(lang='en')
   include ./includes/_head
   body
     include ./includes/_sidebarNav
-    .main-content.container-fluid.container-fixed-992
-      h1 Accordions
+    .main-content.container-fluid
+      h1 Accordions / Expansion panels
       .row
+        .col-sm-4
+          img.img-responsive(src='./img/section-accordion-intro-img.png')
+        .col-sm-8
+          p Expansion panels contain creation flows and allow lightweight editing of an element.
+          p An expansion panel is a lightweight container that may either stand alone or be connected to a larger surface, such as a card.
+          .row
+            .col-sm-6
+              h3 Usage
+              ul.list-unstyled
+                li Editing
+                li Creating flows
+                li FAQs
+            .col-sm-6
+              h3 Behavior
+              ul.list-unstyled
+                li Expand
+                li Collapse
+                li Focus
+
+      h2 Accordion rested state
+      h2 Accordion expanded state
+      h2 Dos &amp; Don'ts
+      .row.container-fixed-992
         .col-xs-12
           nav.accordion
             input#panel-1.sr-only(type='radio', name='accordion')

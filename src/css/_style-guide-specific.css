@@ -1,56 +1,48 @@
-.color-group {
-  overflow: hidden;
-  margin: 0 0 1rem;
-  padding: 0;
-  border-radius: 2px;
-  color: var(--text-light-primary);
-  list-style-type: none;
-  font-weight: 500;
-  line-height: 1;
+/* ==========================================================================
+   General
+   ========================================================================== */
+
+.style-rule-do {
+  border-bottom: 4px solid lime;
 }
-.color-group li {
-  padding: 1em;
-  font-size: inherit;
+
+.style-rule-dont {
+  border-bottom: 4px solid lime;
 }
-.color-group .main-color { border-bottom: 4px solid #fff; }
-.color-group .hex { float: right; }
 
-.primary-100 { background-color: var(--primary-100); }
-.primary-300 { background-color: var(--primary-300); }
-.primary-500 { background-color: var(--primary-500); }
-.primary-700 { background-color: var(--primary-700); }
-.primary-900 { background-color: var(--primary-900); }
 
-.accent-200 { background-color: var(--accent-200); }
-.accent-500 { background-color: var(--accent-500); }
-.accent-700 { background-color: var(--accent-700); }
 
-.gray-100 { background-color: var(--gray-100); }
-.gray-300 { background-color: var(--gray-300); }
-.gray-500 { background-color: var(--gray-500); }
-.gray-600 { background-color: var(--gray-600); }
-.gray-900 { background-color: var(--gray-900); }
 
-/* push body down a so it's not obscured by the nav toggle*/
+
+/* ==========================================================================
+   Global navigation
+   ========================================================================== */
+
+/**
+ * Push body down a so it's not obscured by the mobile nav-menu toggle
+ */
 body { margin-top: 2.3rem; }
+
 .nav-toggle-label {
   position: fixed;
-  z-index: 50;
   top: 0;
   left: 0;
+  z-index: 50;
   display: block;
   padding: .15rem .5rem;
   background-color: #E0E0E0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   line-height: 1;
   cursor: pointer;
+
+  & .icon-menu {
+    margin-right: .25rem;
+    color: var(--text-dark-primary);
+    vertical-align: middle;
+    font-size: 2rem;
+  }
 }
-.nav-toggle-label .icon-menu {
-  font-size: 2rem;
-  vertical-align: middle;
-  color: var(--text-dark-primary);
-  margin-right: .25rem;
-}
+
 #nav-toggle:checked ~ .fixed-sidebar {
   display: block;
   background-color: #E0E0E0;
@@ -84,26 +76,77 @@ body { margin-top: 2.3rem; }
 .fixed-sidebar__nav {
   padding: 0;
   list-style: none;
+
+  & li a {
+    display: inline-block;
+    padding: .4em 1em;
+    width: 100%;
+  }
+  & a:hover:not(.selected) {
+    background-color: var(--gray-100);
+  }
+  & a.selected {
+    background-color: var(--gray-500);
+    color: var(--text-light-primary) !important;
+  }
+  & a:hover {
+    text-decoration: none;
+  }
+  & a:active, a:focus {
+    outline: 0;
+  }
 }
-.fixed-sidebar__nav li a {
-  display: inline-block;
-  padding: .4em 1em;
-  width: 100%;
+
+
+
+
+
+/* ==========================================================================
+   Colors page
+   ========================================================================== */
+
+.color-group {
+  overflow: hidden;
+  margin: 0 0 1rem;
+  padding: 0;
+  border-radius: 2px;
+  color: var(--text-light-primary);
+  list-style-type: none;
+  font-weight: 500;
+  line-height: 1;
+
+  & li {
+    padding: 1em;
+    font-size: inherit;
+  }
 }
-.fixed-sidebar__nav a:hover:not(.selected) {
-  background-color: var(--gray-100);
-}
-.fixed-sidebar a.selected {
-  background-color: var(--gray-500);
-  color: var(--text-light-primary) !important;
-}
-.fixed-sidebar a:hover {
-  text-decoration: none;
-}
-.fixed-sidebar a:active,
-.fixed-sidebar a:focus {
-  outline: 0;
-}
+
+.color-group .main-color { border-bottom: 4px solid #fff; }
+.color-group .hex { float: right; }
+
+.primary-100 { background-color: var(--primary-100); }
+.primary-300 { background-color: var(--primary-300); }
+.primary-500 { background-color: var(--primary-500); }
+.primary-700 { background-color: var(--primary-700); }
+.primary-900 { background-color: var(--primary-900); }
+
+.accent-200 { background-color: var(--accent-200); }
+.accent-500 { background-color: var(--accent-500); }
+.accent-700 { background-color: var(--accent-700); }
+
+.gray-100 { background-color: var(--gray-100); }
+.gray-300 { background-color: var(--gray-300); }
+.gray-500 { background-color: var(--gray-500); }
+.gray-600 { background-color: var(--gray-600); }
+.gray-900 { background-color: var(--gray-900); }
+
+
+
+
+
+/* ==========================================================================
+   Icons page
+   ========================================================================== */
 
 .icon-library [class^='icon-'] {
   color: rgb(0, 153, 217);
@@ -111,9 +154,14 @@ body { margin-top: 2.3rem; }
   font-size: 48px;
 }
 
+
+
+
+
 /* ==========================================================================
-   Snackbars page styles
+   Snackbars page
    ========================================================================== */
+
 .global-nav.global-nav--alert-example {
   position: static;
 }
