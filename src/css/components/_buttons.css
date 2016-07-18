@@ -1,4 +1,5 @@
 .pbc-btn {
+  display: inline-block;
   height: 2.25rem;
   line-height: 2.25rem;
   font-size: 1rem;

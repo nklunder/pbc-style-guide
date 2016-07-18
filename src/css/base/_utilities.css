@@ -39,13 +39,13 @@
 }
 
 
-/* Typography utilities
+/* Typography
    ========================================================================== */
  .text-dark { color: var(--text-dark-primary); }
  .text-light { color: var(--text-light-primary); }
 
 
- /* Layout utilities
+ /* Layout
     ========================================================================== */
  /* Used with Bootstrap's '.container-fluid'. Constrains content to the width of
   * the largest breakpoint while allowing full-width background colors & images.
@@ -68,6 +68,28 @@
      padding: 1rem calc(50% - 568px);
    }
  }
+
+.u-v-padding-sm {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.u-v-padding-md {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.u-v-padding-lg {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+
+/* Color
+   ========================================================================== */
+.u-bgc-white { background-color: #fff !important; }
+.u-bgc-gray  { background-color: var(--gray-300) !important; }
+
+
+
 
 
 /* 'eq-height' classes can be used with card components to give them the same
