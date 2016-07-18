@@ -21,7 +21,7 @@
 /**
  * Push body down a so it's not obscured by the mobile nav-menu toggle
  */
-body { margin-top: 2.3rem; }
+// body { margin-top: 2.3rem; }
 
 .nav-toggle-label {
   position: fixed;

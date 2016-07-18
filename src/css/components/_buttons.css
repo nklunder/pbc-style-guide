@@ -1,4 +1,6 @@
 .pbc-btn {
+  color: var(--accent-700);
+  text-shadow: none;
   display: inline-block;
   height: 2.25rem;
   line-height: 2.25rem;

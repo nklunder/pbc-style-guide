@@ -1,8 +1,10 @@
 html(lang='en')
   include ./includes/_head
   body
-
-    .global-nav
+    .global-nav.global-nav--mobile.container-fixed-1200
+      img.global-nav__logo.global-nav__logo--mobile.visible-xs(src='img/pbc-logo-mobile.svg')
+      a(href="#") #[span.icon-menu] menu
+    .global-nav.hidden-xs
       .global-nav__utility-bar.container-fixed-1200
         img.global-nav__logo.hidden-xs(src='img/pbc-logo.svg')
         img.global-nav__logo.visible-xs(src='img/pbc-logo-mobile.svg')
@@ -35,9 +37,12 @@ html(lang='en')
               a Item 6
 
 
-    .container-fixed-1200.pbc-hero.text-light(data-aspect-ratio="16:9")
+    .container-fixed-1200.pbc-hero.text-light
       .hero-heading
-        h1 Blah blah blah
+        .row
+          .col-sm-8
+            h1 This is the hero image with left alignment
+            a.pbc-btn.pbc-btn-primary Primary button
     .container-fixed-1200.u-v-padding-lg
       .row.sm-eq-height
         .col-sm-3
@@ -86,7 +91,7 @@ html(lang='en')
       p
         a(href="#").pbc-btn.pbc-btn-secondary Secondary button
 
-        
+
     .pbc-footer
       .container-fixed-1200.pbc-footer__navigation
         .row
@@ -150,6 +155,7 @@ html(lang='en')
           .col-xs-6.col-sm-4.col-md-2
             h6 &copy; 2016
             p.small © 2016 Premera Blue Cross is an Independent Licensee of the Blue Cross Blue Shield Association serving businesses and residents of Alaska and Washington state, excluding Clark County.
+      // end navigation links container
 
       .container-fixed-1200.pbc-footer__social-links
         .row
@@ -165,10 +171,13 @@ html(lang='en')
             span #[span.icon-health-apple] Premera blog
           .col-xs-6.col-sm-2
             span #[span.icon-health-apple] Other
+      // end social links container
+
       .container-fixed-1200.pbc-footer__languages
         h6 Languages
         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      // end languages container
+    // end footer components
 
 
     include ./includes/_scripts
-    script(src='js/headroomConfig.js')
