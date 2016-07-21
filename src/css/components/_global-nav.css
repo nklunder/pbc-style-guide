@@ -1,127 +1,20 @@
-/**
- * NOTE: styles for .alert-stripe are located in
- * src/css/components/_snackbars.css
- */
 
-.global-nav {
+
+/* Mobile menu (< 768px)
+   ========================================================================== */
+
+.global-nav--mobile {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 100;
-
-  &__utility-bar {
-    position: relative;
-    display: flex;
-    padding-top: 1rem;
-    padding-bottom: .2rem;
-    align-items: flex-end;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.94);
-  }
-
-  &__logo {
-    height: 3em;
-    margin-bottom: .4em;
-    flex: 0 1 auto;
-  }
-
-  &__utility-bar-links [class^='icon'] {
-    font-size: 1.8rem;
-    margin-right: .1em;
-  }
-}
-
-
-
-
-
-
-.global-nav__utility-bar-links,
-.global-nav__section-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-}
-
-.global-nav li {
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  text-align: center;
-
-}
-.global-nav a {
-  color: var(--text-dark-secondary);
-  padding: 0 .6em .5em;
-  border-bottom: .4em solid transparent;
-  transition:
-    border-bottom .15s ease-in,
-    color .1s ease;
-}
-.global-nav a:hover {
-  border-bottom: .4em solid var(--primary-500);
-  color: var(--primary-500);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
-
-/**
- * NOTE: Causes alignment issues with utility nav items. Further explanation
- * can be found here:
- * http://stackoverflow.com/questions/28956197/flexbox-style-justify-content-space-between-misaligned-in-firefox-with-absolu
- */
-.global-nav__utility-bar::after {
-  position: absolute;
-  right: 0;
-  bottom: -4px;
-  left: 0;
-  display: flex;
-  height: 4px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.12), transparent);
-  content: '';
   justify-content: space-between;
-}
-
-.global-nav__main {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  background-color: rgba(255, 255, 255, 0.9);
-  padding-bottom: 0;
-}
-
-.global-nav__section-links {
-  margin-bottom: 1px;
-  padding: 0;
-}
-.global-nav__section-links .selected a {
-  border-bottom: .4em solid var(--primary-500);
-}
-
-
-/* Headroom JS plugin related styles */
-.headroom {
-  will-change: transform;
-  transition: transform 200ms ease;
-}
-.headroom--pinned {
-  transform: translateY(0%);
-}
-.headroom--unpinned {
-  transform: translateY(-100%);
-}
-
-.global-nav--mobile {
-  display: flex;
-  position: fixed;
-  justify-content: space-between;
-  align-items: center;
   background-color: rgba(255, 255, 255, 0.94);
 
   &:after {
-    content: '';
     position: absolute;
     right: 0;
     bottom: -4px;
@@ -129,26 +22,30 @@
     display: flex;
     height: 4px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.12), transparent);
+    content: '';
   }
 
-  .global-nav__logo {
-    display: inline-block;
+  & .global-nav__logo {
     margin: 0;
+    height: 3em;
+    flex: 0 1 auto;
   }
 
-  & a {
-    display: flex;
+  & .global-nav__menu-btn {
+    cursor: pointer;
+    display: inline-flex;
     flex-direction: column;
-    text-align: center;
     padding: 0;
     border: none;
     color: var(--primary-500);
+    text-align: center;
+    flex: 0 1 auto;
   }
 
-  & a:hover, & a:focus {
+  & .global-nav__menu-btn:hover, & .global-nav__menu-btn:focus {
+    border: none;
     color: var(--primary-900);
     text-decoration: none;
-    border: none;
   }
 
   & .icon-menu {
@@ -160,42 +57,127 @@
 
 }
 
-/*.global-nav--mobile {
-  padding: 1em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}*/
-/*
-.slide-nav-trigger {
-  position: fixed;
-  top: .8rem;
-  right: 1rem;
-  z-index: 400;
-  cursor: pointer;
-}*/
-/*#mobile-menu-toggle:checked ~ .page-wrap {
-  transform: translateX(calc(-100% + 3.5rem));
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-}*/
-/*.page-wrap {
-  overflow: hidden;
-  transition: transform .25s ease-out;
-}*/
-
-/* Mobile & tablet/desktop navigation container */
 @media only screen and (min-width : 768px) {
-  /*.global-nav--mobile,
-  .slide-nav-trigger {
-    display: none;
-  }
-  .global-nav {
-    display: block;
-  }*/
-  /* Ensures that no transform is applied to the main page content when using
-   * tablet/desktop navigation style. For the rare case that a user is on
-   * desktop with a tiny viewport and using the mobile-style nav, then resizes
-   * the browser while still having the menu open.
+  /**
+   * hide mobile nav. BS utility not working because it forces it to use
+   * display block which would override the flex styling
    */
-  /*#mobile-menu-toggle:checked ~ .page-wrap {
-    transform: none;
-  }*/
+   .global-nav--mobile {
+     display: none;
+   }
+
+  /**
+   * NOTE: styles for .alert-stripe are located in
+   * src/css/components/_snackbars.css
+   */
+
+  .global-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+
+    &__utility-bar {
+      position: relative;
+      display: flex;
+      padding-top: 1rem;
+      padding-bottom: .2rem;
+      align-items: flex-end;
+      justify-content: space-between;
+      background-color: rgba(255, 255, 255, 0.94);
+    }
+
+    &__logo {
+      height: 3em;
+      margin-bottom: .4em;
+      flex: 0 1 auto;
+    }
+
+    &__utility-bar-links [class^='icon'] {
+      font-size: 1.8rem;
+      margin-right: .1em;
+    }
+  }
+
+
+
+
+
+
+  .global-nav__utility-bar-links,
+  .global-nav__section-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .global-nav li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+
+  }
+  .global-nav a {
+    color: var(--text-dark-secondary);
+    padding: 0 .6em .5em;
+    border-bottom: .4em solid transparent;
+    transition:
+      border-bottom .15s ease-in,
+      color .1s ease;
+  }
+  .global-nav a:hover {
+    border-bottom: .4em solid var(--primary-500);
+    color: var(--primary-500);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+  /**
+   * NOTE: Causes alignment issues with utility nav items. Further explanation
+   * can be found here:
+   * http://stackoverflow.com/questions/28956197/flexbox-style-justify-content-space-between-misaligned-in-firefox-with-absolu
+   */
+  .global-nav__utility-bar::after {
+    position: absolute;
+    right: 0;
+    bottom: -4px;
+    left: 0;
+    display: flex;
+    height: 4px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.12), transparent);
+    content: '';
+    justify-content: space-between;
+  }
+
+  .global-nav__main {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-bottom: 0;
+  }
+
+  .global-nav__section-links {
+    margin-bottom: 1px;
+    padding: 0;
+  }
+  .global-nav__section-links .selected a {
+    border-bottom: .4em solid var(--primary-500);
+  }
+}
+
+/* Headroom.js related
+   ========================================================================== */
+.headroom {
+  will-change: transform;
+  transition: transform 200ms ease;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
 }

@@ -1,13 +1,12 @@
 html(lang='en')
   include ./includes/_head
   body
-    .global-nav.global-nav--mobile.container-fixed-1200
-      img.global-nav__logo.global-nav__logo--mobile.visible-xs(src='img/pbc-logo-mobile.svg')
-      a(href="#") #[span.icon-menu] menu
+    .global-nav--mobile.container-fixed-1200
+      img.global-nav__logo.global-nav__logo--mobile(src='img/pbc-logo-mobile.svg')
+      a.global-nav__menu-btn.js-nav-toggle #[span.icon-menu] menu
     .global-nav.hidden-xs
       .global-nav__utility-bar.container-fixed-1200
         img.global-nav__logo.hidden-xs(src='img/pbc-logo.svg')
-        img.global-nav__logo.visible-xs(src='img/pbc-logo-mobile.svg')
         ul.global-nav__utility-bar-links
           li
             a #[span.icon-home]
@@ -43,7 +42,7 @@ html(lang='en')
           .col-sm-8
             h1 This is the hero image with left alignment
             a.pbc-btn.pbc-btn-primary Primary button
-    .container-fixed-1200.u-v-padding-lg
+    .container-fixed-1200.u-container-padding-lg
       .row.sm-eq-height
         .col-sm-3
           .pbc-card.pbc-card--link.text-center
@@ -73,7 +72,7 @@ html(lang='en')
                 span.icon-health-savings
               h2.pbc-card__heading.h5 This is a header
               p Est possimus vel saepe rem cumque. Consectetur ullam ducimus eum, optio saepe ipsam, amet earum fugit assumenda consequatur animi nobis repellendus? Rerum culpa quas cumque obcaecati provident tenetur ad laborum?
-    .container-fixed-1200.u-bgc-white.u-v-padding-lg
+    .container-fixed-1200.u-bgc-white.u-container-padding-lg
       .row
         .col-sm-6
           img.img-responsive(src="https://placehold.it/640x640", alt="")
@@ -85,7 +84,7 @@ html(lang='en')
           h2 Header for help content
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           a.pbc-btn.pbc-btn-secondary Secondary button
-    .container-fixed-1200.u-v-padding-md.text-center
+    .container-fixed-1200.u-container-padding-md.text-center
       h2 This is a header for legal, disclaimer content if any
       p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       p

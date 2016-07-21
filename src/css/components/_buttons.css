@@ -37,6 +37,10 @@
 .pbc-btn-primary {
   background-color: var(--accent-500);
 }
+.pbc-btn-primary:hover {
+  color: var(--accent-700);
+  cursor: pointer;
+}
 .pbc-btn-primary:active {
   background-color: var(--accent-200);
 }

@@ -69,15 +69,15 @@
    }
  }
 
-.u-v-padding-sm {
+.u-container-padding-sm {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.u-v-padding-md {
+.u-container-padding-md {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-.u-v-padding-lg {
+.u-container-padding-lg {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
