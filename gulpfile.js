@@ -4,6 +4,7 @@ var postCSS = require('gulp-postcss');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 var del = require('del');
+var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
 
 
@@ -74,9 +75,13 @@ gulp.task('fonts', function () {
 });
 
 
-gulp.task('default', [
-  'views', 'style', 'scripts', 'images', 'fonts', 'serve'
-]);
+gulp.task('default',
+  runSequence(
+    'clean',
+    [ 'views', 'style', 'scripts', 'images', 'fonts'],
+    'serve'
+  )
+);
 
 function handleError(errTitle) {
   return plumber({
