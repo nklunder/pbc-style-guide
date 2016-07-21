@@ -12,7 +12,6 @@ gulp.task('clean', function () {
   del('./build/**/*');
 });
 
-
 gulp.task('serve', function() {
   browserSync.init({
     server: {
@@ -24,7 +23,6 @@ gulp.task('serve', function() {
   gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch("src/pug/**/*.pug", ['pug-watch']);
 });
-
 
 gulp.task('views', function () {
   return gulp.src('./src/pug/**/!(_)*.pug')
@@ -38,7 +36,6 @@ gulp.task('views', function () {
 gulp.task('pug-watch', ['views'], function () {
   browserSync.reload();
 });
-
 
 gulp.task('style', function() {
   var processors = [
@@ -55,33 +52,21 @@ gulp.task('style', function() {
     .pipe(browserSync.stream());
 });
 
-
 gulp.task('scripts', function () {
   return gulp.src('./src/js/**/*.js')
     .pipe(gulp.dest('./build/js/'))
     .pipe(browserSync.stream());
 });
 
-
 gulp.task('images', function () {
   return gulp.src('./src/img/*.*')
     .pipe(gulp.dest('./build/img/'));
 });
 
-
 gulp.task('fonts', function () {
   return gulp.src('./src/fonts/*.*')
     .pipe(gulp.dest('./build/fonts/'));
 });
-
-
-gulp.task('default',
-  runSequence(
-    'clean',
-    [ 'views', 'style', 'scripts', 'images', 'fonts'],
-    'serve'
-  )
-);
 
 function handleError(errTitle) {
   return plumber({
@@ -91,3 +76,13 @@ function handleError(errTitle) {
     })
   });
 }
+
+gulp.task('default',
+  // run tasks synchronously because each step depends
+  // on the last for it to work properly
+  runSequence(
+    'clean',
+    [ 'views', 'style', 'scripts', 'images', 'fonts'],
+    'serve'
+  )
+);

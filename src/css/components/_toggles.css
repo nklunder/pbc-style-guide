@@ -47,24 +47,10 @@ label {
   content: '\2713';
 }
 
-/* radio button styles */
-/*.pbc-toggle input[type='radio'] + label::before {
-  border-radius: 50%;
-  line-height: .6;
-  padding-left: .07em;
-}
-.pbc-toggle input[type='radio']:checked + label::before {
-  background-color: transparent;
-  color: var(--accent-500);
-  content: '\25CF';
-}
-.pbc-toggle input[type='radio']:disabled:checked + label::before {
-  background-color: transparent;
-  color: var(--gray-200);
-  content: '\25CF';
-}*/
-
-
+/**
+ * NOTE: The switch styles are INCREDIBLY nasty. Written purely for a
+ * 'look & feel' demo on the style guide page.
+ */
 .pbc-switch {
   padding-left: 1.75rem;
 }
