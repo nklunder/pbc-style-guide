@@ -1,0 +1,31 @@
+- var currentPage = 'Steppers'
+doctype html
+html(lang='en')
+  include ./includes/_head
+  body
+    include ./includes/_sidebarNav
+    .main-content.container-fluid
+      h1 Steppers
+      .row
+        .col-sm-4
+          img.img-responsive(src="/img/section-steppers-intro.jpg")
+        .col-sm-8
+          h2 Steppers
+          p Steppers convey progress through numbered steps
+          p Steppers display progress through a sequence of logical and numbered steps. They may also be used for navigation.
+          p Steppers may display a transient feedback message after a step is saved.
+
+          h3 Types of steps
+          ul.list-unstyled
+            li Editable
+            li Non-editable
+            li Mobile
+            li Optional
+
+          h3 Types of steppers
+          ul.list-unstyled
+            li Horizontal
+            li Linear
+            li Non-linear
+
+    include ./includes/_scripts
